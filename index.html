@@ -3,16 +3,132 @@
 <head>
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1" name="viewport">
-<title>A Night at Home</title>
+<title>A Night at Home v1.2</title>
 <style title="Twine CSS">@keyframes appear{0%{opacity:0}to{opacity:1}}@keyframes fade-in-out{0%,to{opacity:0}50%{opacity:1}}@keyframes rumble{25%{top:-0.1em}75%{top:.1em}0%,to{top:0px}}@keyframes shudder{25%{left:.1em}75%{left:-0.1em}0%,to{left:0px}}@keyframes buoy{25%{top:.25em}75%{top:-0.25em}0%,to{top:0px}}@keyframes sway{25%{left:.25em}75%{left:-0.25em}0%,to{left:0px}}@keyframes pulse{0%{transform:scale(0, 0)}20%{transform:scale(1.2, 1.2)}40%{transform:scale(0.9, 0.9)}60%{transform:scale(1.05, 1.05)}80%{transform:scale(0.925, 0.925)}to{transform:scale(1, 1)}}@keyframes zoom-in{0%{transform:scale(0, 0)}to{transform:scale(1, 1)}}@keyframes shudder-in{0%,to{transform:translateX(0em)}5%,25%,45%{transform:translateX(-1em)}15%,35%,55%{transform:translateX(1em)}65%{transform:translateX(-0.6em)}75%{transform:translateX(0.6em)}85%{transform:translateX(-0.2em)}95%{transform:translateX(0.2em)}}@keyframes rumble-in{0%,to{transform:translateY(0em)}5%,25%,45%{transform:translateY(-1em)}15%,35%,55%{transform:translateY(1em)}65%{transform:translateY(-0.6em)}75%{transform:translateY(0.6em)}85%{transform:translateY(-0.2em)}95%{transform:translateY(0.2em)}}@keyframes fidget{0%,8.1%,82.1%,31.1%,38.1%,44.1%,40.1%,47.1%,74.1%,16.1%,27.1%,72.1%,24.1%,95.1%,6.1%,36.1%,20.1%,4.1%,91.1%,14.1%,87.1%,to{left:0px;top:0px}8%,82%,31%,38%,44%{left:-1px}40%,47%,74%,16%,27%{left:1px}72%,24%,95%,6%,36%{top:-1px}20%,4%,91%,14%,87%{top:1px}}@keyframes slide-right{0%{transform:translateX(-100vw)}}@keyframes slide-left{0%{transform:translateX(100vw)}}@keyframes slide-up{0%{transform:translateY(100vh)}}@keyframes slide-down{0%{transform:translateY(-100vh)}}@keyframes fade-right{0%{opacity:0;transform:translateX(-1em)}to{opacity:1}}@keyframes fade-left{0%{opacity:0;transform:translateX(1em)}to{opacity:1}}@keyframes fade-up{0%{opacity:0;transform:translateY(1em)}to{opacity:1}}@keyframes fade-down{0%{opacity:0;transform:translateY(-1em)}to{opacity:1}}@keyframes flicker{0%,29%,31%,63%,65%,77%,79%,86%,88%,91%,93%{opacity:0}30%{opacity:.2}64%{opacity:.4}78%{opacity:.6}87%{opacity:.8}92%,to{opacity:1}}@keyframes blur{0%{filter:blur(2rem);opacity:0}25%{opacity:1}to{filter:blur(0rem);opacity:1}}.dom-debug-mode tw-story,.dom-debug-mode tw-passage,.dom-debug-mode tw-sidebar,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{outline:1px solid #f5a3da;min-height:32px;display:block !important}.dom-debug-mode tw-story::before,.dom-debug-mode tw-passage::before,.dom-debug-mode tw-sidebar::before,.dom-debug-mode tw-include::before,.dom-debug-mode tw-hook::before,.dom-debug-mode tw-expression::before,.dom-debug-mode tw-link::before,.dom-debug-mode tw-dialog::before,.dom-debug-mode tw-columns::before,.dom-debug-mode tw-column::before,.dom-debug-mode tw-align::before{position:absolute;top:0;left:0;height:16px;background-color:#f5a3da;color:#000;font-size:16px;font-weight:normal;font-style:normal;font-family:monospace;display:inline-block;line-height:100%;white-space:pre;z-index:999997}.dom-debug-mode tw-story:hover,.dom-debug-mode tw-passage:hover,.dom-debug-mode tw-sidebar:hover,.dom-debug-mode tw-include:hover,.dom-debug-mode tw-hook:hover,.dom-debug-mode tw-expression:hover,.dom-debug-mode tw-link:hover,.dom-debug-mode tw-dialog:hover,.dom-debug-mode tw-columns:hover,.dom-debug-mode tw-column:hover,.dom-debug-mode tw-align:hover{outline:1px solid #fc9}.dom-debug-mode tw-story:hover::before,.dom-debug-mode tw-passage:hover::before,.dom-debug-mode tw-sidebar:hover::before,.dom-debug-mode tw-include:hover::before,.dom-debug-mode tw-hook:hover::before,.dom-debug-mode tw-expression:hover::before,.dom-debug-mode tw-link:hover::before,.dom-debug-mode tw-dialog:hover::before,.dom-debug-mode tw-columns:hover::before,.dom-debug-mode tw-column:hover::before,.dom-debug-mode tw-align:hover::before{background-color:#fc9;transition:background-color 1s}.dom-debug-mode tw-passage,.dom-debug-mode tw-include,.dom-debug-mode tw-hook,.dom-debug-mode tw-expression,.dom-debug-mode tw-link,.dom-debug-mode tw-dialog,.dom-debug-mode tw-columns,.dom-debug-mode tw-column,.dom-debug-mode tw-align{padding:1em;margin:0}.dom-debug-mode tw-story::before{content:'<tw-story tags="' attr(tags) '">'}.dom-debug-mode tw-passage::before{top:-16px;content:'<tw-passage tags="' attr(tags) '">'}.dom-debug-mode tw-sidebar::before{top:-16px;content:"<tw-sidebar>"}.dom-debug-mode tw-hook::before{content:'<tw-hook name="' attr(name) '">'}.dom-debug-mode tw-expression::before{content:'<tw-expression name="' attr(name) '">'}.dom-debug-mode tw-link::before{content:'<tw-link name="' attr(name) '">'}.dom-debug-mode tw-dialog::before{content:"<tw-dialog>"}.dom-debug-mode tw-columns::before{content:"<tw-columns>"}.dom-debug-mode tw-column::before{content:"<tw-column>"}.dom-debug-mode tw-align::before{content:"<tw-align>"}.dom-debug-mode tw-include::before{content:'<tw-include type="' attr(type) '" name="' attr(name) '">'}tw-open-button[goto]{display:none}.debug-mode tw-open-button[replay],.debug-mode tw-open-button[goto]{display:inline}.debug-mode tw-expression{display:inline-block !important}.debug-mode tw-expression[type=variable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"$" attr(name)}.debug-mode tw-expression[type=tempVariable]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"_" attr(name)}.debug-mode tw-expression[return=boolean]{background-color:rgba(179,179,179,.2)}.debug-mode tw-expression[return=array]{background-color:rgba(255,102,102,.2)}.debug-mode tw-expression[return=dataset]{background-color:rgba(255,128,0,.2)}.debug-mode tw-expression[return=number]{background-color:rgba(255,179,102,.2)}.debug-mode tw-expression[return=datamap]{background-color:rgba(255,255,102,.2)}.debug-mode tw-expression[return=changer]{background-color:rgba(179,255,102,.2)}.debug-mode tw-expression[return=lambda]{background-color:rgba(102,255,102,.2)}.debug-mode tw-expression[return=hookname]{background-color:rgba(102,255,204,.2)}.debug-mode tw-expression[return=string]{background-color:rgba(102,255,255,.2)}.debug-mode tw-expression[return=datatype]{background-color:rgba(102,153,255,.2)}.debug-mode tw-expression[return=gradient],.debug-mode tw-expression[return=colour]{background-color:rgba(204,102,255,.2)}.debug-mode tw-expression[return=instant],.debug-mode tw-expression[return=macro]{background-color:rgba(240,117,199,.2)}.debug-mode tw-expression[return=command]{background-color:rgba(153,153,255,.2)}.debug-mode tw-expression.false{background-color:rgba(255,0,0,.2) !important}.debug-mode tw-expression[type=macro]::before{content:"(" attr(name) ":)";padding:0 .5rem;font-size:1rem;vertical-align:middle;line-height:normal;background-color:inherit;border:1px solid rgba(255,255,255,.5)}.debug-mode tw-expression[title]:not([title=""]){cursor:help}.debug-mode tw-hook{background-color:rgba(0,85,255,.1) !important}.debug-mode tw-hook::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"["}.debug-mode tw-hook::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]"}.debug-mode tw-hook[name]::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"]<" attr(name) "|"}.debug-mode tw-pseudo-hook{background-color:rgba(255,170,0,.1) !important}.debug-mode tw-collapsed::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"{"}.debug-mode tw-collapsed::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"}"}.debug-mode tw-verbatim::before,.debug-mode tw-verbatim::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:"`"}.debug-mode tw-align[style*="text-align: center"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 50%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: left"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0.25) 0%, hsla(14, 100%, 87%, 0) 100%)}.debug-mode tw-align[style*="text-align: right"]{background:linear-gradient(to right, hsla(14, 100%, 87%, 0) 0%, hsla(14, 100%, 87%, 0.25) 100%)}.debug-mode tw-column{background-color:rgba(189,228,255,.2)}.debug-mode tw-enchantment{animation:enchantment .5s infinite;border:1px solid}.debug-mode tw-link::after,.debug-mode tw-broken-link::after{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(passage-name)}.debug-mode tw-include{background-color:rgba(204,128,51,.1)}.debug-mode tw-include::before{font-size:.8rem;padding-left:.2rem;padding-right:.2rem;vertical-align:top;content:attr(type) ' "' attr(name) '"'}.debug-dialogs tw-backdrop:not(.eval-replay):not(.harlowe-crash){pointer-events:none;opacity:.1}tw-eval-replay tw-eval-code,tw-eval-replay tw-eval-explanation{max-height:20vh;overflow:auto;margin:10px auto}tw-eval-replay tw-eval-code{display:block;font-family:monospace;padding-bottom:1ex;border-bottom:2px solid gray}tw-eval-replay tw-eval-explanation{display:block;text-align:center}tw-eval-replay tw-eval-explanation>code{white-space:pre-wrap}tw-eval-replay tw-eval-explanation>code.from-block{width:40%;display:inline-block;text-align:left;max-height:4em;overflow-wrap:anywhere;overflow-y:scroll}tw-eval-replay tw-eval-explanation>code.from-block~.to-desc{width:calc(40% - 2em);margin-left:2em;display:inline-block}tw-eval-replay tw-eval-explanation>code.from-block+span::after{content:"..."}tw-eval-replay tw-eval-explanation>code.from-inline{text-align:right}tw-eval-replay tw-eval-explanation>:nth-child(2){white-space:pre}tw-eval-replay tw-eval-explanation>.to-desc{text-align:left}tw-eval-replay tw-eval-explanation>table{width:100%;margin-top:1em}tw-eval-replay tw-eval-explanation>table td{white-space:pre-wrap !important;word-wrap:anywhere}tw-eval-replay tw-eval-reason{text-align:center;font-size:80%;font-style:italic;display:block}tw-eval-replay tw-eval-it{text-align:center;font-size:80%;display:block}tw-eval-replay tw-dialog-links{display:-ms-flexbox;display:flex;-ms-flex-pack:distribute;justify-content:space-around}@keyframes enchantment{0%,to{border-color:#ffb366}50%{border-color:#6fc}}tw-debugger{position:fixed;box-sizing:border-box;bottom:0;right:0;z-index:999999;min-width:14em;min-height:1em;padding:0em .5em .5em 1em;font-size:1.25em;font-family:sans-serif;color:#262626;background-color:#fff;border-left:solid #262626 2px;border-top:solid #262626 2px;border-top-left-radius:.5em;opacity:1}tw-debugger.fade-panel:not(:hover){opacity:.33}tw-debugger.theme-dark{color:#d9d9d9;background-color:#000}tw-debugger.theme-dark{border-color:#d9d9d9 rgba(0,0,0,0) rgba(0,0,0,0) #d9d9d9}tw-debugger select{margin-right:1em;width:12em}tw-debugger button,tw-debugger tw-link{border-radius:3px;border:solid #999 1px;margin:auto 4px;color:#262626;background-color:#fff;cursor:pointer}tw-debugger button.enabled,tw-debugger tw-link.enabled{color:#000;background-color:#d9d9d9;box-shadow:inset #999 3px 5px .5em}tw-debugger.theme-dark button,tw-debugger.theme-dark tw-link{color:#d9d9d9;background-color:#000;border-color:#666}tw-debugger.theme-dark button.enabled,tw-debugger.theme-dark tw-link.enabled{color:#e6e6e6;background-color:#424242;box-shadow:inset #666 3px 5px .5em}tw-debugger button{font-size:1em;overflow-x:hidden;text-overflow:ellipsis;white-space:pre}tw-debugger tw-link{font-size:1.25em;border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}tw-debugger tw-link:hover{border-color:#262626;color:#262626}tw-debugger.theme-dark tw-link:hover{border-color:#d9d9d9;color:#d9d9d9}tw-debugger tw-dialog{background-color:#fff;color:#000;font-size:1.25em}tw-debugger.theme-dark tw-dialog{background-color:#000;color:#e6e6e6}tw-debugger .panel{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;position:absolute;bottom:100%;left:-2px;right:0;padding:1em;overflow-y:scroll;overflow-x:hidden;border:inherit;box-sizing:content-box;background-color:#fff;border-bottom:solid #999 2px;border-top-left-radius:.5em;border-bottom-left-radius:.5em;font-size:.8em}tw-debugger .panel:empty,tw-debugger .panel[hidden]{display:none}tw-debugger.theme-dark .panel{background-color:#000;border-bottom-color:#666}tw-debugger .panel-source .panel-row-buttons{width:2rem}tw-debugger .panel-source .source-tags{width:20%;font-style:italic}tw-debugger .panel-row-source td{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere;max-height:8rem;padding:1rem}tw-debugger .panel-rows{width:100%;overflow-x:scroll}tw-debugger .panel-rows>*{display:table-row}tw-debugger .panel-rows>div:nth-of-type(2n){background-color:#e6e6e6}tw-debugger .panel-tools .panel-rows>*,tw-debugger .panel-options .panel-rows>*{margin-top:.4rem;display:block}tw-debugger.theme-dark .panel-rows>div:nth-of-type(2n){background-color:#212121}tw-debugger .panel-row-buttons{text-align:right}tw-debugger .panel-variables .panel-rows:empty::before{content:"~ No variables ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-enchantments .panel-rows:empty::before{content:"~ No enchantments ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty::before{content:"~ No errors... for now. ~";font-style:italic;color:#575757;text-align:center}tw-debugger .panel-errors .panel-rows:empty+.panel-errors-bottom{display:none}tw-debugger.theme-dark .panel-variables .panel-rows:empty::before,tw-debugger.theme-dark .panel-enchantments .panel-rows:empty::before,tw-debugger.theme-dark .panel-errors .panel-rows:empty::before{color:#a8a8a8}tw-debugger .panel-rows:empty+.panel-variables-bottom{display:none}tw-debugger th[data-col]{text-decoration:underline;cursor:pointer}tw-debugger th[data-col][data-order=asc]::after{content:"↓"}tw-debugger th[data-col][data-order=desc]::after{content:"↑"}tw-debugger .panel-storylets:not(.panel-exclusive) .storylet-exclusive,tw-debugger .panel-storylets:not(.panel-urgent) .storylet-urgent{display:none}tw-debugger .storylet-exclusive,tw-debugger .storylet-urgent,tw-debugger .storylet-open{text-align:center}tw-debugger .panel-variables-bottom{padding-top:5px}tw-debugger .enchantment-row{min-height:1.5em}tw-debugger .variable-path{opacity:.4}tw-debugger .temporary-variable-scope,tw-debugger .enchantment-local{font-family:sans-serif;font-weight:normal;opacity:.8;font-size:.75em}tw-debugger .temporary-variable-scope:not(:empty)::before,tw-debugger .enchantment-local:not(:empty)::before{content:" in "}tw-debugger .variable-name,tw-debugger .enchantment-name{font-family:monospace;font-weight:bold}tw-debugger .variable-type{color:#575757;font-weight:normal;text-overflow:ellipsis;overflow:hidden;max-width:10em}tw-debugger.theme-dark .variable-type{color:#a8a8a8}tw-debugger .error-row{display:table-row;background-color:rgba(230,101,204,.3)}tw-debugger .error-row:nth-of-type(2n){background-color:rgba(237,145,219,.3)}tw-debugger .error-row>*{display:table-cell;padding:.25em .5em}tw-debugger .error-row .error-message[title]:not([title=""]){cursor:help}tw-debugger .error-row .error-passage{color:#575757}tw-debugger.theme-dark .error-row .error-passage{color:#a8a8a8}tw-debugger .storylet-row{background-color:rgba(193,240,225,.3)}tw-debugger .storylet-row:nth-child(2n){background-color:rgba(152,231,204,.3)}tw-debugger .storylet-row.storylet-closed{font-style:italic;background-color:#fff}tw-debugger .storylet-row.storylet-closed:nth-child(2n){background-color:#e6e6e6}tw-debugger .storylet-row.storylet-closed>:not(.storylet-lambda){opacity:.6}.storylet-error tw-debugger .storylet-row{background-color:rgba(230,101,204,.3)}.storylet-error tw-debugger .storylet-row:nth-child(2n){background-color:rgba(237,145,219,.3)}tw-debugger .storylet-row .storylet-name,tw-debugger .storylet-row .storylet-value{display:inline-block;width:50%}tw-debugger .storylet-row .storylet-lambda{font-family:monospace;font-size:1rem;white-space:pre-wrap;overflow-wrap:anywhere}tw-debugger.theme-dark .storylet-row.storylet-closed{background-color:#000}tw-debugger.theme-dark .storylet-row.storylet-closed:nth-child(2n){background-color:#212121}tw-debugger .tabs{padding-bottom:.5em}tw-debugger .tab{border-radius:0px 0px .5em .5em;border-top:none;top:-2px}tw-debugger .resizer-h{position:absolute;height:14em;border-left:2px solid #999;border-right:2px solid #999;top:10px;left:4px;width:8px;cursor:ew-resize}tw-debugger.theme-dark .resizer-h{border-color:rgba(0,0,0,0) #666}tw-debugger .resizer-v{position:absolute;height:8px;border-top:2px solid #999;border-bottom:2px solid #999;margin-bottom:4px;top:4px;left:10px;width:95%;cursor:ns-resize;box-sizing:border-box}tw-debugger.theme-dark .resizer-v{border-color:#666 rgba(0,0,0,0)}tw-debugger mark{color:inherit;background-color:rgba(101,230,230,.3) !important}tw-dialog{z-index:999997;border:#fff solid 2px;padding:2em;color:#fff;background-color:#000;display:block}@media(min-width: 576px){tw-dialog{max-width:50vw}}tw-dialog input[type=text]{font-size:inherit;width:100%;border:solid #fff !important}tw-dialog-links{text-align:right;display:-ms-flexbox;display:flex;-ms-flex-pack:end;justify-content:flex-end}tw-backdrop{z-index:999996;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.8);display:-ms-flexbox;display:flex;-ms-flex-align:center;align-items:center;-ms-flex-pack:center;justify-content:center}tw-backdrop~tw-backdrop{display:none}tw-link,.enchantment-link{cursor:pointer;color:#4169e1;font-weight:bold;text-decoration:none;transition:color .2s ease-in-out}tw-passage [style^=color] tw-link:not(:hover),tw-passage [style*=" color"] tw-link:not(:hover),tw-passage [style^=color][hover=true] tw-link:hover,tw-passage [style*=" color"][hover=true] tw-link:hover,tw-passage [style^=color] .enchantment-link:not(:hover),tw-passage [style*=" color"] .enchantment-link:not(:hover),tw-passage [style^=color][hover=true] .enchantment-link:hover,tw-passage [style*=" color"][hover=true] .enchantment-link:hover{color:inherit}tw-link:hover,.enchantment-link:hover{color:#00bfff}tw-link:active,.enchantment-link:active{color:#dd4b39}.visited{color:#6941e1}tw-passage [style^=color] .visited:not(:hover),tw-passage [style*=" color"] .visited:not(:hover),tw-passage [style^=color][hover=true] .visited:hover,tw-passage [style*=" color"][hover=true] .visited:hover{color:inherit}.visited:hover{color:#e3e}tw-broken-link{color:#933;border-bottom:2px solid #933;cursor:not-allowed}tw-passage [style^=color] tw-broken-link:not(:hover),tw-passage [style*=" color"] tw-broken-link:not(:hover),tw-passage [style^=color][hover=true] tw-broken-link:hover,tw-passage [style*=" color"][hover=true] tw-broken-link:hover{color:inherit}tw-link.enchantment-mouseover,.link.enchantment-mouseover,tw-expression.enchantment-mouseover>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border-bottom:2px dashed #999}tw-link.enchantment-mouseover:hover,tw-link.enchantment-mouseover:active,.link.enchantment-mouseover:hover,.link.enchantment-mouseover:active,tw-expression.enchantment-mouseover>tw-link:hover,tw-expression.enchantment-mouseover>tw-link:active{color:inherit}tw-link.enchantment-mouseover.enchantment-button,.link.enchantment-mouseover.enchantment-button,tw-expression.enchantment-mouseover>tw-link.enchantment-button{border-style:dashed}tw-link.enchantment-mouseout,.link.enchantment-mouseout,tw-expression.enchantment-mouseout>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;border:rgba(64,149,191,.6) 1px solid;border-radius:.2em}tw-link.enchantment-mouseout:hover,tw-link.enchantment-mouseout:active,.link.enchantment-mouseout:hover,.link.enchantment-mouseout:active,tw-expression.enchantment-mouseout>tw-link:hover,tw-expression.enchantment-mouseout>tw-link:active{color:inherit}tw-link.enchantment-mouseout:hover,.link.enchantment-mouseout:hover,tw-expression.enchantment-mouseout>tw-link:hover{background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 1px solid}tw-link.enchantment-dblclick,.link.enchantment-dblclick,tw-expression.enchantment-dblclick>tw-link{color:inherit;font-weight:inherit;transition:none;cursor:inherit;cursor:pointer;border:2px solid #999;border-radius:0}tw-link.enchantment-dblclick:hover,tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:hover,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:hover,tw-expression.enchantment-dblclick>tw-link:active{color:inherit}tw-link.enchantment-dblclick:active,.link.enchantment-dblclick:active,tw-expression.enchantment-dblclick>tw-link:active{background-color:#999}tw-link.enchantment-button,.link.enchantment-button,.enchantment-button:not(.link) tw-link,.enchantment-button:not(.link) .link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block}.enchantment-button{display:block}.enchantment-clickblock{cursor:pointer;width:100%;height:100%;display:block}.enchantment-clickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;color:rgba(65,105,225,.5);transition:color .2s ease-in-out}.enchantment-clickblock>:not(tw-enchantment):hover::after{color:rgba(0,191,255,.5)}.enchantment-clickblock>:not(tw-enchantment):active::after{color:rgba(222,78,59,.5)}.enchantment-clickblock>:not(tw-enchantment)::after{box-shadow:inset 0 0 0 .5vmax}.enchantment-clickblock>tw-passage::after,.enchantment-clickblock>tw-sidebar::after{box-shadow:0 0 0 .5vmax}.enchantment-mouseoverblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:2px dashed #999}.enchantment-mouseoutblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;border:rgba(64,149,191,.6) 2px solid}.enchantment-mouseoutblock:hover>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;background-color:rgba(175,197,207,.75);border:rgba(0,0,0,0) 2px solid;border-radius:.2em}.enchantment-dblclickblock>:not(tw-enchantment)::after{content:"";width:100%;height:100%;top:0;left:0;display:block;box-sizing:border-box;position:absolute;pointer-events:none;cursor:pointer;border:2px solid #999}tw-dialog-links{padding-top:1.5em}tw-dialog-links tw-link{border-radius:16px;border-style:solid;border-width:2px;text-align:center;padding:0px 8px;display:block;display:inline-block}html{margin:0;height:100%;overflow-x:hidden}*,:before,:after{position:relative;box-sizing:inherit}body{margin:0;height:100%}tw-storydata{display:none}tw-story{display:-ms-flexbox;display:flex;-ms-flex-direction:column;flex-direction:column;font:100% Georgia,serif;box-sizing:border-box;width:100%;min-height:100%;font-size:1.5em;line-height:1.5em;padding:5% 5%;overflow:hidden;background-color:#000;color:#fff}tw-story [style*=content-box] *{box-sizing:border-box}@media(min-width: 576px){tw-story{padding:5% 20%}}tw-story tw-consecutive-br{display:block;height:1.6ex;visibility:hidden}tw-story select{background-color:rgba(0,0,0,0);font:inherit;border-style:solid;padding:2px}tw-story select:not([disabled]){color:inherit}tw-story textarea{resize:none;background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none;padding:2px}tw-story input[type=text]{background-color:rgba(0,0,0,0);font:inherit;color:inherit;border-style:none}tw-story input[type=checkbox]{transform:scale(1.5);margin:0 .5em .5em .5em;vertical-align:middle}tw-story tw-noscript{animation:appear .8s}tw-passage{display:block}tw-sidebar{text-align:center;display:-ms-flexbox;display:flex;-ms-flex-pack:justify;justify-content:space-between}@media(min-width: 576px){tw-sidebar{left:-5em;width:3em;position:absolute;-ms-flex-direction:column;flex-direction:column}tw-enchantment[style*=width]>tw-sidebar{width:inherit}}tw-icon{display:inline-block;margin:.5em 0;font-size:66px;font-family:"Verdana",sans-serif}tw-icon[alt]{opacity:.2;cursor:pointer}tw-icon[alt]:hover{opacity:.4}tw-icon[data-label]::after{font-weight:bold;content:attr(data-label);font-size:20px;bottom:-20px;left:-50%;white-space:nowrap}tw-meter{display:block}tw-hook:empty,tw-expression:empty{display:none}tw-error{display:inline-block;border-radius:.2em;padding:.2em;font-size:1rem;cursor:help;white-space:pre-wrap}tw-error.error{background-color:rgba(223,58,190,.6);color:#fff}tw-error.warning{background-color:rgba(223,140,58,.6);color:#fff;display:none}.debug-mode tw-error.warning{display:inline}tw-error-explanation{display:block;font-size:.8rem;line-height:1rem}tw-open-button,tw-folddown{cursor:pointer;line-height:0em;border-radius:4px;border:1px solid rgba(255,255,255,.5);font-size:.8rem;margin:0 .2rem;padding:3px;white-space:pre}tw-folddown::after{content:"▶"}tw-folddown.open::after{content:"▼"}tw-open-button[replay]{display:none}tw-error tw-open-button,tw-eval-replay tw-open-button{display:inline !important}tw-open-button::after{content:attr(label)}tw-notifier{border-radius:.2em;padding:.2em;font-size:1rem;background-color:rgba(223,182,58,.4);display:none}.debug-mode tw-notifier{display:inline}tw-notifier::before{content:attr(message)}tw-colour{border:1px solid #000;display:inline-block;width:1em;height:1em}tw-enchantment:empty{display:none}h1{font-size:3em}h2{font-size:2.25em}h3{font-size:1.75em}h1,h2,h3,h4,h5,h6{line-height:1em;margin:.3em 0 .6em 0}pre{font-size:1rem;line-height:initial}small{font-size:70%}big{font-size:120%}mark{color:rgba(0,0,0,.6);background-color:#ff9}ins{color:rgba(0,0,0,.6);background-color:rgba(255,242,204,.5);border-radius:.5em;box-shadow:0em 0em .2em #ffe699;text-decoration:none}center{text-align:center;margin:0 auto;width:60%}blink{text-decoration:none;animation:fade-in-out 1s steps(1, end) infinite alternate}tw-align{display:block}tw-columns{display:-ms-flexbox;display:flex;-ms-flex-direction:row;flex-direction:row;-ms-flex-pack:justify;justify-content:space-between}.transition-in{animation:appear 0ms step-start}.transition-out{animation:appear 0ms step-end}[data-t8n^=dissolve].transition-in,[data-t8n=fade].transition-in{animation:appear .8s}[data-t8n^=dissolve].transition-out,[data-t8n=fade].transition-out{animation:appear .8s reverse}[data-t8n^=shudder].transition-in{display:inline-block !important;animation:shudder-in .8s}[data-t8n^=shudder].transition-out{display:inline-block !important;animation:shudder-in .8s reverse}[data-t8n^=rumble].transition-in{display:inline-block !important;animation:rumble-in .8s}[data-t8n^=rumble].transition-out{display:inline-block !important;animation:rumble-in .8s reverse}[data-t8n^=pulse].transition-in{animation:pulse .8s;display:inline-block !important}[data-t8n^=pulse].transition-out{animation:pulse .8s reverse;display:inline-block !important}[data-t8n^=zoom].transition-in{animation:zoom-in .8s;display:inline-block !important}[data-t8n^=zoom].transition-out{animation:zoom-in .8s reverse;display:inline-block !important}[data-t8n^=blur].transition-in{animation:blur .8s;display:inline-block !important}[data-t8n^=blur].transition-out{animation:blur .8s reverse;display:inline-block !important}[data-t8n^=slideleft].transition-in{animation:slide-left .8s;display:inline-block !important}[data-t8n^=slideleft].transition-out{animation:slide-right .8s reverse;display:inline-block !important}[data-t8n^=slideright].transition-in{animation:slide-right .8s;display:inline-block !important}[data-t8n^=slideright].transition-out{animation:slide-left .8s reverse;display:inline-block !important}[data-t8n^=slideup].transition-in{animation:slide-up .8s;display:inline-block !important}[data-t8n^=slideup].transition-out{animation:slide-down .8s reverse;display:inline-block !important}[data-t8n^=slidedown].transition-in{animation:slide-down .8s;display:inline-block !important}[data-t8n^=slidedown].transition-out{animation:slide-up .8s reverse;display:inline-block !important}[data-t8n^=fadeleft].transition-in{animation:fade-left .8s;display:inline-block !important}[data-t8n^=fadeleft].transition-out{animation:fade-right .8s reverse;display:inline-block !important}[data-t8n^=faderight].transition-in{animation:fade-right .8s;display:inline-block !important}[data-t8n^=faderight].transition-out{animation:fade-left .8s reverse;display:inline-block !important}[data-t8n^=fadeup].transition-in{animation:fade-up .8s;display:inline-block !important}[data-t8n^=fadeup].transition-out{animation:fade-down .8s reverse;display:inline-block !important}[data-t8n^=fadedown].transition-in{animation:fade-down .8s;display:inline-block !important}[data-t8n^=fadedown].transition-out{animation:fade-up .8s reverse;display:inline-block !important}[data-t8n^=flicker].transition-in{animation:flicker .8s}[data-t8n^=flicker].transition-out{animation:flicker .8s reverse}
 </style>
 </head>
 <body>
-<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play A Night at Home.</tw-noscript></noscript></tw-story>
-<tw-storydata name="A Night at Home" startnode="11" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="2EC879AA-5A43-410D-BE26-7B09CAEE683F" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
+<tw-story><noscript><tw-noscript>JavaScript needs to be enabled to play A Night at Home v1.2.</tw-noscript></noscript></tw-story>
+<tw-storydata name="A Night at Home v1.2" startnode="11" creator="Twine" creator-version="2.9.2" format="Harlowe" format-version="3.3.9" ifid="2EC879AA-5A43-410D-BE26-7B09CAEE683F" options="" tags="Mine" zoom="0.3" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">tw-passage {
     font-size: 20px; 
     line-height: 1.6;
-}</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Sleep-No-Rats" color="red"></tw-tag><tw-tag name="Sleep-Rats-Found" color="blue"></tw-tag><tw-tag name="Darkness" color="purple"></tw-tag><tw-tag name="Window" color="yellow"></tw-tag><tw-passagedata pid="1" name="Goodnight 01" tags="Sleep-No-Rats Sleep-Rats-Found Window" position="1500,300" size="100,100">The door shuts behind them with a soft click, and you’re left standing in the entryway. The old house seems to exhale around you, settling into silence as the familiar sound of your parents’ cars fade down the street. You catch a glimpse of their taillights through the window—one final flash of red before they disappear into the night.
+  
+}
+
+@media only screen and (max-device-width: 480px) {
+
+  tw-story {
+	  font-size: 3.2em;
+	  width: 100%;
+	  max-width: 95%;
+	  margin: 0 auto 0 auto;
+	  padding: 20% 5%;
+  }
+
+  tw-passage {
+	  width: 100%;
+  }  
+  
+}
+
+
+/*Pulsing Effect
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.enchantment-button:not(.link) tw-link{
+	color:#fff;
+}
+
+.enchantment-button:not(.link) tw-link:hover{
+	color:red;
+}
+
+
+
+
+.pulse {
+    animation: pulse 1s infinite;
+    color: #800000;
+    font-family: 'UnifrakturMaguntia', serif;
+    font-size: 18px;
+    display: inline-block;
+
+} */
+
+
+@keyframes glitch {
+    0% { 
+        transform: skew(0deg); 
+        filter: contrast(1) brightness(1) blur(0); 
+    }
+    10% { 
+        transform: skew(5deg) translate(-2px, 2px); 
+        filter: contrast(1.2) brightness(0.8) blur(0.5px); 
+    }
+    20% { 
+        transform: skew(-15deg); 
+        filter: contrast(1) brightness(1.2); 
+    }
+    30% { 
+        transform: skew(15deg) translate(3px, -3px); 
+        filter: contrast(0.8) brightness(1.3) blur(1px); 
+    }
+    40% { 
+        transform: skew(-1deg); 
+        filter: contrast(1.5) brightness(1); 
+    }
+    50% { 
+        transform: skew(20deg); 
+        filter: contrast(0.6) brightness(0.7) blur(2px); 
+    }
+    60% { 
+        transform: skew(-25deg) translate(-1px, 1px); 
+        filter: contrast(1.8) brightness(1.4) saturate(2) blur(0.7px); 
+    }
+    70% { 
+        transform: skew(10deg); 
+        filter: contrast(0.9) brightness(0.9) blur(0.3px) saturate(0.5); 
+    }
+    80% { 
+        transform: skew(25deg) translate(-3px, 3px); 
+        filter: contrast(1.2) brightness(1.2); 
+    }
+    90% { 
+        transform: skew(-5deg); 
+        filter: contrast(1.4) brightness(0.5) saturate(0.3) blur(1.5px); 
+    }
+    100% { 
+        transform: skew(40deg); 
+        filter: contrast(1) brightness(1) blur(0); 
+    }
+}
+
+.glitch {
+    animation: glitch 1.5s infinite;
+    /*color: red;*/
+  	font-family: serif;
+    font-style: italic;
+    display: inline-block;
+    font-size: 26px;
+  
+  	text-shadow: 2px 2px 0px #000, -2px -2px 0px #000;
+    
+    /* Background Flicker */
+   /* background: #8a0303; */
+    
+    /* Pixelated Effect
+    filter: contrast(1.2) saturate(1.2);
+    text-shadow: 
+        1px 1px 0px #000, 
+        -1px -1px 0px #000, 
+        2px 2px 0px #000, 
+        -2px -2px 0px #000;*/
+}
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Sleep-No-Rats" color="red"></tw-tag><tw-tag name="Sleep-Rats-Found" color="blue"></tw-tag><tw-tag name="Window" color="orange"></tw-tag><tw-tag name="Big-Bad" color="purple"></tw-tag><tw-passagedata pid="1" name="Goodnight 01" tags="Sleep-No-Rats Sleep-Rats-Found Window" position="1500,300" size="100,100">(set: $scratch to (t8n:&quot;flicker&quot;)+ (transition-time: 2s))The door shuts behind them with a soft click, and you’re left standing in the entryway. The old house seems to exhale around you, settling into silence as the familiar sound of your parents’ cars fade down the street. You catch a glimpse of their taillights through the window—one final flash of red before they disappear into the night.
 
 “See you tomorrow,” you murmur to yourself. You should be used to this by now—being home alone. It’s not like it’s the first time. Still, tonight feels different somehow...
 
@@ -22,11 +138,11 @@ You turn away, and head back toward the living room. Everything is normal. The w
 
 But then—
 
-[[Scratch.-&gt;Goodnight 02]]
-</tw-passagedata><tw-passagedata pid="2" name="Goodnight 02" tags="Sleep-No-Rats Sleep-Rats-Found Window" position="1500,500" size="100,100">(set: $scratch to (t8n:&quot;flicker&quot;)+ (transition-time: 2s) ) &lt;!--scratch animation variable--&gt;The sound is faint, almost too soft to notice. You freeze, every muscle tensing, ears straining to catch the sound again. But there’s nothing. Silence, thick and heavy. Did you just imagine it? You’re not sure, but—
+$scratch+(t8n-delay: 1s)[[[Scratch.-&gt;Goodnight 02]]]
+</tw-passagedata><tw-passagedata pid="2" name="Goodnight 02" tags="Sleep-No-Rats Sleep-Rats-Found Window" position="1500,500" size="100,100">(set: $scratch to (t8n:&quot;flicker&quot;)+ (transition-time: 2s)) &lt;!--scratch animation variable--&gt;The sound is faint, almost too soft to notice. You freeze, every muscle tensing, ears straining to catch the sound again. But there’s nothing. Silence, thick and heavy. Did you just imagine it? You’re not sure, but—
 
 &#39;&#39;$scratch[Scratch.]&#39;&#39;
-&#39;&#39;&lt;div style=&quot;margin-left: 2em&quot;&gt;$scratch+ (t8n-delay: 1s)[Scratch.]&lt;/div&gt;&#39;&#39;This time, it’s clearer. Low and dry, like something sharp dragging lightly across wood. Your heart starts to beat rapidly in your chest. What is that noise?
+&#39;&#39;&lt;div style=&quot;margin-left: 2em&quot;&gt;$scratch+(t8n-delay: 1s)[Scratch.]&lt;/div&gt;&#39;&#39;This time, it’s clearer. Low and dry, like something sharp dragging lightly across wood. Your heart starts to beat rapidly in your chest. What is that noise?
 
 You turn, your gaze darts to the front door. It’s closed, but is it locked? Are all the locks secure?
 
@@ -49,9 +165,9 @@ Nothing is out of place. Nothing is wrong.
 
 But your pulse won’t slow. You sit there for a long moment, staring blankly at the desktop, waiting for the frantic beat of your heart to ease. And then—
 
-&#39;&#39;$scratch+(t8n-delay:5s)[Scratch.]&#39;&#39;
+&#39;&#39;$scratch[Scratch.]&#39;&#39;
 
- [[You freeze.-&gt;Run Upstairs 02]]
+[[You freeze.-&gt;Run Upstairs 02]]
 </tw-passagedata><tw-passagedata pid="4" name="Run Upstairs 02" tags="Sleep-No-Rats Sleep-Rats-Found" position="1700,900" size="100,100">Your body goes rigid. The sound is faint, like a dry rasp against the floorboards—so soft you almost didn’t catch it. But it’s there.
 
 You hold your breath, ears straining.
@@ -68,7 +184,7 @@ But then the sound comes again. An insistent scratching.
 
 Or you could keep looking forward. Look anywhere but the door. Force yourself to act normal. 
 
-If you could just get to [[sleep-&gt;Ignore It 01]], everything will be okay.</tw-passagedata><tw-passagedata pid="5" name="Sit Up and Listen 01" tags="" position="1500,1000" size="100,100">Body tense, ears straining to hear another sound, but all you can hear is your own breathing, shallow and unsteady.
+If you could just get to [[sleep-&gt;Ignore It 01]], everything would be okay.</tw-passagedata><tw-passagedata pid="5" name="Sit Up and Listen 01" tags="" position="1500,1025" size="100,100">Body tense, ears straining to hear another sound, but all you can hear is your own breathing, shallow and unsteady.
 
 Then… there—a noise.
 
@@ -80,7 +196,7 @@ You glance toward your bedroom door, instincts screaming at you to stay put, to 
 
 What’s making that sound? Why is it still there?
 
-Maybe you’re imagining things. Or [[maybe you should do something.-&gt;Check It Out 01]] [[But leaving your room means going out into the dark...-&gt;Ignore It 01]]
+Maybe you’re [[imagining things.-&gt;Ignore It 01]] Or maybe [[you should do something.-&gt;Check It Out 01]] But leaving your room means going out into the dark...
 </tw-passagedata><tw-passagedata pid="6" name="Ignore It 01" tags="Sleep-No-Rats Sleep-Rats-Found" position="1900,1000" size="100,100">You force yourself to look away from the door. No. You’re not going to acknowledge it. The sound isn’t real. It can’t be. If you just pretend it’s not there, if you focus on something, it’ll stop. It has to stop.  
 
 Your hands shake slightly as you push yourself up from your desk chair. You glance toward your bed—warm and inviting. A safe place to bury yourself and shut out the rest of the world. You make your way over and slide under the blankets.  
@@ -93,18 +209,22 @@ The room is still and silent. Just the soft hum of electronics and the distant c
 
 But then—  
 
+(t8n-delay: 3s)[&#39;&#39;$scratch[Scratch.]&#39;&#39;]
+
+[[Your eyes snap open. -&gt;Ignore it 02]]</tw-passagedata><tw-passagedata pid="7" name="Ignore it 02" tags="Sleep-No-Rats Sleep-Rats-Found" position="1900,1200" size="100,100">{(set: $lightOn to (enchant: ?page, (text-color: #4a0404) + (background: #fbdfa2)))
+(set:$lights to false)}
 &#39;&#39;$scratch[Scratch.]&#39;&#39;
 
-[[Your eyes snap open. -&gt;Ignore it 02]]</tw-passagedata><tw-passagedata pid="7" name="Ignore it 02" tags="Sleep-No-Rats Sleep-Rats-Found" position="1900,1200" size="100,100">&#39;&#39;Scratch. Stop. Scratch.&#39;&#39;
+&#39;&#39;$scratch+(t8n-delay: 1s)[Scratch.]&#39;&#39;
 
-The noise is louder now, sharper. In the walls—near the headboard of your bed. A dry, scraping sound like something clawing &lt;!--gently--&gt; against the drywall. You freeze.
+$scratch+(t8n-delay: 2s)[The noise is louder now, sharper. In the walls—near the headboard of your bed. A dry, scraping sound like something clawing &lt;!--gently--&gt; against the drywall. You freeze.
 What—what is that?  
 
 The urge to do something surges up, almost overwhelming. You could [[call out-&gt;Call Out 01]]. Demand to know what’s there. Maybe it’s nothing, just your imagination, but… what if it’s not?  
 
 You sit up in your bed, and wrap your blankets around yourself. Or you could get up, [[take a hammer to that wall-&gt;Check It Out 01]] and check. Face it head-on, and see for yourself what’s making that awful noise.  
 
-But there’s a third option too. You could just...[[drown it out.-&gt;Cope 01 - Turn On the Lights  01]] Get up. Turn on every single light. Flood the room with brightness until there’s no room for shadows, no room for doubt, and just make it all go away.  </tw-passagedata><tw-passagedata pid="8" name="Call Out 02" tags="Sleep-Rats-Found Darkness" position="1900,1575" size="100,100">When did it get so cold? The room was warm enough just a moment ago, but now the air feels sharp and biting, like the dead of winter.
+But there’s a third option too. You could just...[[drown it out.-&gt;Cope 01 - Turn On the Lights 01]] Get up. Turn on every single light. Flood the room with brightness until there’s no room for shadows, no room for doubt, and just make it all go away. ]</tw-passagedata><tw-passagedata pid="8" name="Call Out 02" tags="Sleep-Rats-Found Big-Bad" position="1900,1600" size="100,100">(set: $lights to false)(if: $lights)[  (enchant: ?page, (text-color: black) + (background: #fcfcfc))]When did it get so cold? The room was warm enough just a moment ago, but now the air feels sharp and biting, like the dead of winter.
 
 It’s like your words pulled something out of the shadows—you invited something in. Something you can’t see, but that’s definitely, aware of you. Watching...
 
@@ -113,7 +233,12 @@ You swallow. What was that noise? What’s making it, and why does it feel like 
 You don’t have a choice now. You have to find out. You can’t just sit here, shivering in the dark, pretending everything’s fine. And you definitely can’t go back to sleep, not like this.
 
 [[It’s time to get that hammer.-&gt;Check It Out 01]]
-</tw-passagedata><tw-passagedata pid="9" name="Check It Out 01" tags="Sleep-Rats-Found" position="1500,1500" size="100,100">Getting the hammer is easier said than done. 
+</tw-passagedata><tw-passagedata pid="9" name="Check It Out 01" tags="Sleep-Rats-Found" position="1500,1500" size="100,100">{(set: $lights to true)
+
+(if: $lights is true)[
+  $lightOn
+]}
+Getting the hammer is easier said than done. 
 
 Especially when getting out of your room might take all of the courage you can muster.
 You glance at the door and take a deep breath, steeling your nerves.
@@ -124,16 +249,22 @@ The bathroom lights flicker to life when you flip the switch, and you close the 
 
 Looking through the vanity, the hammer is exactly where you left it, nestled among cleaning supplies and old junk. [[You grab it-&gt;Check It Out 02]] and feel its weight in your hands, solid and reassuring—something real.
 
-</tw-passagedata><tw-passagedata pid="10" name="Cope 01 - Turn On the Lights  01" tags="Sleep-No-Rats" position="2200,1500" size="100,100">You sit up, and get out of bed. One by one, you turn on every light in the room, each small glow chasing away the shadows until your room is bathed in warm light. 
+</tw-passagedata><tw-passagedata pid="10" name="Cope 01 - Turn On the Lights 01" tags="Sleep-No-Rats" position="2200,1500" size="100,100">{(set: $lights to true)
+
+(if: $lights is true)[
+  $lightOn
+]}
+You sit up, and get out of bed. One by one, you turn on every light in the room, each small glow chasing away the shadows until your room is bathed in warm light. 
 
 You know it’s irrational, but you can’t help it. The light makes you feel safer. Like whatever’s out there can’t reach you as long as you stay here, sat in your bed, in this tiny bubble of brightness. 
 
 Still, the sound lingers in your memory—that awful scratching noise from within the walls. Your hands are clenched at your sides, nails digging into your palms. You told yourself that hiding in here was the safest option, but even now your body is so stiff you can’t move a muscle.
 
-[[&#39;&#39;Focus.&#39;&#39;-&gt;Cope 02 - Turn On the Lights 02]]</tw-passagedata><tw-passagedata pid="11" name="A Night at Home" tags="Sleep-No-Rats Sleep-Rats-Found Window" position="1500,100" size="100,100">(text-size: 4)+(align: &quot;=&gt;&lt;=&quot;)+(t8n:&quot;flicker&quot;)+ (transition-time: 3s)[A Night at Home]
+[[&#39;&#39;Focus&#39;&#39;-&gt;Cope 01 - Turn On the Lights 02]] you tell yourself.
 
+&lt;!--(if: $lights is true)[(enchant: ?page, (text-color: #4a0404) + (background: #fbdfa2))]--&gt;</tw-passagedata><tw-passagedata pid="11" name="A Night at Home - Start" tags="" position="1500,100" size="100,100">(text-size: 4)+(align: &quot;=&gt;&lt;=&quot;)+(t8n:&quot;flicker&quot;)+(transition-time: 3s)[A Night at Home]
 
-(button:&quot;=XX=&quot;)[[Begin story-&gt;Goodnight 01]]</tw-passagedata><tw-passagedata pid="12" name="Check the Lock" tags="Window" position="1300,700" size="100,100">(set: $checkLock to true)You approach the front door again.
+(button:&quot;=X=&quot;)[[Begin Story-&gt;Goodnight 01]]</tw-passagedata><tw-passagedata pid="12" name="Check the Lock" tags="Window" position="1300,700" size="100,100">(set: $checkLock to true)You approach the front door again.
 
 Your parents have only been gone for a few minutes, but it already feels so //different.// The silence is heavier, like something is filling the room.
 
@@ -150,7 +281,10 @@ You pause, hand hovering near the edge of the fabric.
 If you [[//looked//-&gt;Check the Lock - Through the Glass]]...
 
 Would something be looking back?
-</tw-passagedata><tw-passagedata pid="13" name="Cope 02 - Turn On the Lights 02" tags="Sleep-No-Rats Sleep-Rats-Found Darkness" position="2400,1500" size="100,100">You need to calm down. You glance around the room, taking in the comforting clutter: the desk piled with books and papers, the bed half-buried in stuffed animals, the bookshelves sagging under the weight of books, and your walls covered in posters. 
+</tw-passagedata><tw-passagedata pid="13" name="Cope 01 - Turn On the Lights 02" tags="Sleep-No-Rats Sleep-Rats-Found Big-Bad" position="2400,1500" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+You need to calm down. You glance around the room, taking in the comforting clutter: the desk piled with books and papers, the bed half-buried in stuffed animals, the bookshelves sagging under the weight of books, and your walls covered in posters. 
 
 You take a deep breath, there has to be a way to make this go away. To ignore it. You don’t have to open the door or know what’s in the walls. You don’t have to see what’s out there. You just need to find something, anything to keep your mind busy. 
  
@@ -158,7 +292,10 @@ Your gaze falls on a shelf, landing on [[a book-&gt;Cope 02 - Reading 01]] you�
 
 Or  [[you could check...-&gt;Check It Out 01]] There’s a hammer under the kitchen sink. Just make one little hole and take a look. If you know there’s nothing there, maybe you can finally stop jumping at shadows...
 
-Maybe it&#39;s safer to [[ call out-&gt;Call Out 02]]? The idea tugs at you—[[a voice inside your head whispering-&gt;Big Bad - Echoes in the Dark]]  , “Call out, just to see if something answers back.” It’s a ridiculous thought. But the silence feels so heavy… What if there //is// something listening?</tw-passagedata><tw-passagedata pid="14" name="Cope 02 - Reading 01" tags="Sleep-No-Rats Darkness" position="2200,1700" size="100,100">You pick up a book and settle into your blankets again, hoping that the story will distract you. You turn to a familiar chapter, eyes skimming over the lines. The story unfolds, and each word pulls you a little further away from your nerves.
+Maybe it&#39;s safer to [[ call out-&gt;Call Out 02]]? The idea tugs at you—[[a voice inside your head whispering-&gt;Big Bad - Echoes in the Dark]]  , “Call out, just to see if something answers back.” It’s a ridiculous thought. But the silence feels so heavy… What if there &#39;&#39;//is// &#39;&#39;something listening?</tw-passagedata><tw-passagedata pid="14" name="Cope 02 - Reading 01" tags="Sleep-No-Rats Big-Bad" position="2200,1700" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+You pick up a book and settle into your blankets again, hoping that the story will distract you. You turn to a familiar chapter, eyes skimming over the lines. The story unfolds, and each word pulls you a little further away from your nerves.
 
 But as your eyes drift over the lines, you catch yourself pausing every few sentences, glancing around the room, [[waiting for something.-&gt;Big Bad - Echoes in the Dark]]
 
@@ -166,7 +303,10 @@ Nothing’s changed. Of course, nothing’s changed. But still…
 
 You let out a breath, focusing harder. Just—read. Read and relax. You force yourself through one page, then another. The story is compelling, drawing you in—but there’s an itch beneath your skin, something there that keeps tugging your attention back to the present.
 
-[[Why can’t you concentrate?-&gt;Cope 02 - Reading 02]]</tw-passagedata><tw-passagedata pid="15" name="Cope 02 - Reading 02" tags="Sleep-No-Rats Sleep-Rats-Found" position="2400,1700" size="100,100">Your ears strain to hear a noise that’s not there—at least, you hope it’s not. Every small creak of the old house  makes you twitch, eyes darting to the corners of the room. 
+[[Why can’t you concentrate?-&gt;Cope 02 - Reading 02]]</tw-passagedata><tw-passagedata pid="15" name="Cope 02 - Reading 02" tags="Sleep-No-Rats Sleep-Rats-Found" position="2400,1700" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+Your ears strain to hear a noise that’s not there—at least, you hope it’s not. Every small creak of the old house  makes you twitch, eyes darting to the corners of the room. 
 
 It’s ridiculous really. You’re safe. Everything’s fine.
 
@@ -174,7 +314,10 @@ You shake yourself, squeezing the book tighter. You’re letting your mind wande
 
 You could try to [[listen to some music instead-&gt;Cope 03 - Music 01]], force yourself to focus on something else. Ignore it.
 
-Or you could turn to the wall, [[put your ear against it and listen-&gt;Check It Out 01]]. Did the sound really stop, or did it just get quieter? Maybe if you took a peek, you could finally see what’s there. If there’s anything at all...</tw-passagedata><tw-passagedata pid="16" name="Cope 03 - Music 01" tags="Sleep-No-Rats" position="2200,1900" size="100,100">You grab your headphones from your nightstand, slipping them on with trembling hands. The moment you hit play, a soothing wave of sound washes over you. You let out a shaky breath, the tension in your shoulders easing slightly as the music drowns out the oppressive silence.
+Or you could turn to the wall, [[put your ear against it and listen-&gt;Check It Out 01]]. Did the sound really stop, or did it just get quieter? Maybe if you took a peek, you could finally see what’s there. If there’s anything at all...</tw-passagedata><tw-passagedata pid="16" name="Cope 03 - Music 01" tags="Sleep-No-Rats" position="2200,1900" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+You grab your headphones from your nightstand, slipping them on with trembling hands. The moment you hit play, a soothing wave of sound washes over you. You let out a shaky breath, the tension in your shoulders easing slightly as the music drowns out the oppressive silence.
 
 It’s better. Much better. There’s no scratching, no scraping. Just the steady rhythm of your favorite songs. You close your eyes, and take it in.
 
@@ -183,15 +326,21 @@ But your mind won’t be still. It drifts back to the memory of that noise, tryi
 You push those thoughts away again. There’s nothing there and there’s no reason to look. You bury yourself deeper in your blankets, squeezing your eyes shut, willing the exhaustion to take you. But it doesn’t. Not at first. You lie there, listening to the music, letting the steady beat dull the edge of your thoughts. Minutes tick by, your heart slowly easing back into a regular rhythm.
 
 [[You yawn-&gt;Cope 3 - Music 02]]
-</tw-passagedata><tw-passagedata pid="17" name="Cope 3 - Music 02" tags="Sleep-No-Rats Sleep-Rats-Found" position="2400,1900" size="100,100">And then a wave of exhaustion hits you, the kind that settles deep in your bones, and you sag deeper into the mattress. You look at the clock, 3:00AM, you’ve been at this for hours. Why are you even still awake?
+</tw-passagedata><tw-passagedata pid="17" name="Cope 3 - Music 02" tags="Sleep-No-Rats Sleep-Rats-Found" position="2400,1900" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+And then a wave of exhaustion hits you, the kind that settles deep in your bones, and you sag deeper into the mattress. You look at the clock, 3:00AM, you’ve been at this for hours. Why are you even still awake?
 
 Maybe… maybe you should just let it go. 
 
 You can feel the pull of sleep now, gentle and insistent, tugging at the corners of your mind. You yawn, your limbs heavy, muscles aching from the strain of holding onto that tension for so long. Maybe you should just… stay here. Let the music pull you under, let the weariness swallow you whole. 
 
-You can figure it out tomorrow.&#39;&#39; //Or never.//&#39;&#39;
+You can figure it out tomorrow.&#39;&#39; //Or never...//&#39;&#39;
 
-You take a slow breath, caught between two thoughts: Should you [[get up and smash through the wall,-&gt;Check It Out 01]] find out what’s really there, or should you [[stay in bed,-&gt;Sleeping End No Rats 01]] close your eyes, and let the warmth and music finally lull you to sleep?  </tw-passagedata><tw-passagedata pid="18" name="Sleeping End No Rats 01" tags="Sleep-No-Rats" position="2300,2100" size="100,100">You wake up slowly the next morning, light filtering through your curtains. 
+You take a slow breath, caught between two thoughts: Should you [[get up and smash through the wall,-&gt;Check It Out 01]] find out what’s really there, or should you [[stay in bed,-&gt;Sleeping End No Rats 01]] close your eyes, and let the warmth and music finally lull you to sleep?  </tw-passagedata><tw-passagedata pid="18" name="Sleeping End No Rats 01" tags="Sleep-No-Rats" position="2300,2100" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+You wake up slowly the next morning, light filtering through your curtains. 
 
 For a moment you just lie there, your mind still hazy from the night before. But the tension from last night is gone, replaced by a warm sense of relief. Although slightly disappointed in yourself giving into the pull of sleep the night before, you can’t stay mad. It’s morning, you made it through and that’s more than enough.
 
@@ -200,26 +349,37 @@ Yawning, you sit up. Your muscles feel stiff, like you’ve barely moved in hour
 You can hear your parents moving around in the kitchen. Familiar, comforting sounds—pots clanging softly, the murmur of conversation.
 You smile, content. The house is awake again, filled with the hum of normal life. You start to swing your legs over the edge of the bed, thinking about breakfast—maybe pancakes, or toast—when—
 
-&#39;&#39;$scratch[Scratch.]&#39;&#39;
+&#39;&#39;(t8n:&quot;flicker&quot;)+ (transition-time: 2s)[Scratch.]&#39;&#39;
 
-You freeze, the sound cutting through the light sounds of the morning. It’s softer now, but unmistakable. Your stomach clenches, a shiver running down your spine. [[That sound.-&gt;Sleeping End No Rats 02]] The same one that kept you up, that stole you sleep and filled your mind with anxiety.
-</tw-passagedata><tw-passagedata pid="19" name="Sleeping End No Rats 02" tags="Sleep-No-Rats" position="2300,2300" size="100,100">Crinkle, rustle.
- 
+You freeze, the sound cutting through the light sounds of the morning. It’s softer now, but unmistakable. Your stomach clenches, a shiver running down your spine. [[That sound.-&gt;Sleeping End No Rats 02]] The same one that kept you up, that stole you sleep and filled your mind with anxiety</tw-passagedata><tw-passagedata pid="19" name="Sleeping End No Rats 02" tags="Sleep-No-Rats" position="2300,2300" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+&#39;&#39;//Crinkle, rustle.//&#39;&#39;
+
 It’s coming from near your desk. Like paper being crumpled and shuffled. What… what is that?
 
 Your breath catches, but this time, you don’t panic. It’s daylight. Whatever was scaring you before can’t hurt you now. Steeling yourself, you slip out of bed and creep toward your desk. The noise grows louder as you get closer, and then—
 
 You see them. Two small, furry bodies scrambling around in a mess of papers, whiskers twitching, noses darting out as they explore. Rats.
 
-Staring down at them, you realize these aren’t just any rats. They’re the neighbor’s pets, the ones Ms. Adela (Please pick a different name) told you about just a few days ago. She said they’d gotten loose and were probably lost forever.
+Staring down at them, you realize these aren’t just any rats. They’re the neighbor’s pets, the ones they told you about just a few days ago. They said they’d gotten loose and were probably lost forever.
 
 But here they are, making a mess of your trash. You stare, part of you wanting to laugh and part of you just annoyed. This was what kept you up all night? This—
 
-You look to the wall beside your desk. And there, near the head of your bed, is a small hole gnawed(?) into the baseboard. Rat-sized. 
+You look to the wall beside your desk. And there, near the head of your bed, is a small hole gnawed into the baseboard. Rat-sized. 
 
 You slump back on your bed, rats in hand. All that fear and tension, the endless worry, the creeping dread—and it was just two escapees tunneling through the wall. 
 
-At you hope it was </tw-passagedata><tw-passagedata pid="20" name="Big Bad - Echoes in the Dark" tags="Darkness" position="1300,1500" size="100,100">(set: $seenRats04 to false)(set: $seenRats06 to false)The air in the room turns cold, and the atmosphere is heavy with something…almost tangible. You stand frozen, your eyes darting to the dark corners of the room. (if: $seenRats04 or $seenRats06)[The rats’ rustling, almost drowned out by a low hum that seems to vibrate through your bones.] You can feel it watching you...
+At least you hope it was.(click: &quot;At least you hope it was.&quot;)[
+
+&#39;&#39;Good End: A Good Nights Rest?&#39;&#39;
+
+You willed yourself to sleep through the night, but something doesn&#39;t feel quite right.
+
+(button:&quot;=X=&quot;)[[Start Over-&gt;A Night at Home - Start]]]</tw-passagedata><tw-passagedata pid="20" name="Big Bad - Echoes in the Dark" tags="Big-Bad" position="1300,1500" size="100,100">{(set: $lights to false)}
+The moment you acknowledge it, the air in the room turns cold, and the atmosphere heavy with something…almost tangible. 
+
+You stand frozen, your eyes darting to the dark corners of the room. (if: $seenRats04 is true or $seenRats06 is true)[The rats’ rustling, almost drowned out by a low hum that seems to vibrate through your bones.] You can feel it watching you...
 
 You’re not alone.
 
@@ -227,31 +387,43 @@ You’re not alone.
 
 Eyes, far too many eyes. They glimmer in the dark, flickering in and out of focus like stars. They hover in a dark swirling mass, a loose humanoid shape that seems to dissolve and reform with every breath you take.
 
-“You see me.”
+&lt;div class=&quot;glitch&quot;&gt;“You see me.”&lt;/div&gt;
 
 The voice doesn’t come from anywhere. It’s inside you, rattling against your skull. It’s hungry. Desperate.
 
-And it knows you’re afraid, but you [[stand firm-&gt;Big Bad Encounter - Stand Your Ground]].</tw-passagedata><tw-passagedata pid="21" name="Check It Out 02" tags="Sleep-Rats-Found" position="1500,1700" size="100,100">As you make your way back to your room, [[that strange pressure follows you.-&gt;Big Bad - Echoes in the Dark]] It clings to the walls, to your skin, but you push through it, pretending not to notice. You know where the sound is coming from now—the wall behind your nightstand. You just need to deal with it, and then you can sleep.
+And it knows[[ you’re afraid-&gt;Big Bad Encounter - Run]], but you [[stand firm-&gt;Big Bad Encounter - Stand Your Ground]].</tw-passagedata><tw-passagedata pid="21" name="Check It Out 02" tags="Sleep-Rats-Found" position="1500,1700" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+As you make your way back to your room, [[that strange pressure follows you.-&gt;Big Bad - Echoes in the Dark]] It clings to the walls, to your skin, but you push through it, pretending not to notice. You know where the sound is coming from now—the wall behind your nightstand. You just need to deal with it, and then you can sleep.
 
 Back in your room, you lock the door behind you, and turn on all the lights. 
 
 The room is filled with warm light and the uneasy feeling fades just a bit.
 
-You settle on your knees in front of the wall, the cold wood pressing against your legs. And with a deep breath, you raise the hammer and [[strike the wall.-&gt;Check It Out 03]]</tw-passagedata><tw-passagedata pid="22" name="Check It Out 03" tags="Sleep-Rats-Found" position="1700,1700" size="100,100">(set: $hole to true)The dull thud of hammer meeting the wall is satisfying. Each swing fills you with confidence and drives the persistent scratching further from your mind. 
+You settle on your knees in front of the wall, the cold wood pressing against your legs. And with a deep breath, you raise the hammer and [[strike the wall.-&gt;Check It Out 03]]</tw-passagedata><tw-passagedata pid="22" name="Check It Out 03" tags="Sleep-Rats-Found" position="1700,1700" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+(set: $hole to true)The dull thud of hammer meeting the wall is satisfying. Each swing fills you with confidence and drives the persistent scratching further from your mind. 
 
 With one final, harder swing, paint and plaster crumble, revealing a hole in the wall. The noise stops suddenly, but you don’t feel relieved. Not yet.
 
 You lean in closer to inspect it, holding your breath. Through the hole, you see movement. You reach out for you phone, shining your flashlight into the hole. There you find two small, familiar shapes. Rats—your neighbor’s, the ones that have been missing for days.
 
-You can’t just leave them there, you have to [[get them out!-&gt;Check It Out 04]]</tw-passagedata><tw-passagedata pid="23" name="Check It Out 04" tags="Sleep-Rats-Found Darkness" position="1500,1900" size="100,100">If you could make the hole bigger, you’d be able to reach them. Maybe even pull them out.
+You can’t just leave them there, you have to [[get them out!-&gt;Check It Out 04]]</tw-passagedata><tw-passagedata pid="23" name="Check It Out 04" tags="Sleep-Rats-Found Big-Bad" position="1500,1900" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+If you could make the hole bigger, you’d be able to reach them. Maybe even pull them out.
 
 You steel yourself, raising the hammer again. The first few swings send dust flying. The rats squeal, retreating further into the wall. But you don’t stop; this is the only way to help them.
 
-The hole widens with each swing. Your muscles ache, but you keep going. Just a bit more, and you’ll be able to get your arm and sholder inside.
+The hole widens with each swing. Your muscles ache, but you keep going. Just a bit more, and you’ll be able to get your arm and shoulder inside.
 
 As you lift the hammer for one final blow, you hear a faint sound—like a [[soft whispering-&gt;Big Bad - Echoes in the Dark]]—from within the wall, just behind where the rats are huddled. You hesitate, straining to hear, but the rats’ frantic squeaks drown it out. Was it just your imagination?
 
-You swing the hammer down again, the hole now wide open. The rats are right there, pressed against the far side of the space. [[You reach in-&gt;Check It Out 05]], fingers brushing fur, but they flinch away, [[something behind them shifting in the shadows.-&gt;Big Bad - Echoes in the Dark]]</tw-passagedata><tw-passagedata pid="24" name="Check It Out 05" tags="Sleep-Rats-Found" position="1700,1925" size="100,100">Slowly, you extend your fingers, murmuring softly to calm them down.
+You swing the hammer down again, the hole now wide open. The rats are right there, pressed against the far side of the space. [[You reach in-&gt;Check It Out 05]], fingers brushing fur, but they flinch away, [[something behind them shifting in the shadows.-&gt;Big Bad - Echoes in the Dark]]</tw-passagedata><tw-passagedata pid="24" name="Check It Out 05" tags="Sleep-Rats-Found" position="1700,1925" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+Slowly, you extend your fingers, murmuring softly to calm them down.
 
 “It’s okay… I’ve got you.”
 
@@ -263,7 +435,10 @@ You set the first rat aside, then reach in again. The second rat is a little big
 
 You can’t believe it, you actually got them out. Relief floods through you as you set the second rat beside the first. 
 
-They huddle together, sniffling and squeaking softly. [[You smile.-&gt;Rats! 01]]</tw-passagedata><tw-passagedata pid="25" name="Rats! 01" tags="Sleep-Rats-Found" position="1700,2100" size="100,100">You cradle the two rats close to your chest. They’re trembling, but they’re safe. You breathe out slowly, shoulders relaxing for the first time all night.
+They huddle together, sniffling and squeaking softly. [[You smile.-&gt;Rats! 01]]</tw-passagedata><tw-passagedata pid="25" name="Rats! 01" tags="Sleep-Rats-Found" position="1700,2100" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+You cradle the two rats close to your chest. They’re trembling, but they’re safe. You breathe out slowly, shoulders relaxing for the first time all night.
 
 “It’s okay now,” you murmur softly, stroking the smaller one’s back. It sniffs your shirt, then nuzzles in closer, finally relaxing. The larger rat twitches its nose, still wary, but neither of them tries to move to run. You glance back at the hole in the wall, but force yourself to look away. It’s over now.
 
@@ -272,11 +447,16 @@ And you’ll definitely have to explain the hole to your parents in the morning.
 
 Gingerly, you set the rats on the floor beside you, keeping your movements slow so they don’t spook.
 
-Your gaze lands on the [[half-eaten snack-&gt;Rats 02]] on your desk. They probably shouldn’t have it, but it’s better than nothing.</tw-passagedata><tw-passagedata pid="26" name="Rats 02" tags="Sleep-Rats-Found" position="1900,2100" size="100,100">You grab a handful of crumbs and kneel back down, sprinkling the crumbs in front of them. The smaller rat is the first to move, sniffing before nibbling at the food. Soon the bigger one joins in, scooping up bits of cheese dust and licking it off its paws.
+Your gaze lands on the [[half-eaten snack-&gt;Rats 02]] on your desk. They probably shouldn’t have it, but it’s better than nothing.</tw-passagedata><tw-passagedata pid="26" name="Rats 02" tags="Sleep-Rats-Found" position="1900,2100" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+You grab a handful of crumbs and kneel back down, sprinkling the crumbs in front of them. The smaller rat is the first to move, sniffing before nibbling at the food. Soon the bigger one joins in, scooping up bits of cheese dust and licking it off its paws.
 
 You can’t help the smile tugging at your lips. The tension in the room seems to ease, just a little.
 
-Maybe[[ everything’s okay-&gt;Rats 03]] after all.</tw-passagedata><tw-passagedata pid="27" name="Rats 03" tags="Sleep-Rats-Found" position="1700,2300" size="100,100">
+Maybe[[ everything’s okay-&gt;Rats 03]] after all.</tw-passagedata><tw-passagedata pid="27" name="Rats 03" tags="Sleep-Rats-Found" position="1700,2300" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
 You can’t just let them roam around your room. You look around, searching for a safe spot for them to spend the night and pull out one of the storage bins you keep under your bed.
 
 You set it between your desk and nightstand. 
@@ -285,20 +465,24 @@ Grabbing an old blanket from the closet, you spread it inside.
 Pleased with the setup, you set the rats down in the container.
 One of them curls up in the corner. The other burrows into the folds of fabric. They squeak softly, noses twitching, and after a few moments, they finally seem to settle down. 
 
-[[You should too.-&gt;Rats 04]]</tw-passagedata><tw-passagedata pid="28" name="Rats 04" tags="Sleep-Rats-Found Darkness" position="1900,2300" size="100,100">(set: $seenRats04 to true)The [[heaviness in the air-&gt;Big Bad - Echoes in the Dark]] hasn’t gone away completely—it’s still there, thick and cold, clinging to the back of your neck—but you ignore it. It’s probably just the stress of the night catching up with you.
+[[You should too.-&gt;Rats 04]]</tw-passagedata><tw-passagedata pid="28" name="Rats 04" tags="Sleep-Rats-Found Big-Bad" position="1900,2300" size="100,100">{(if: $lights is true)[
+  $lightOn
+] (set: $seenRats04 to true)}
+The [[heaviness in the air-&gt;Big Bad - Echoes in the Dark]] hasn’t gone away completely—it’s still there, thick and cold, clinging to the back of your neck—but you ignore it. It’s probably just the stress of the night catching up with you.
 
 You’ll feel better in the morning.
 
 You kneel beside the crate, brushing your fingers over the blanket. The rats shift, pressing against your touch, and for the first time tonight, the room feels… peaceful.
 
-Maybe you can [[let your guard down-&gt;Rats 05]]. Just for a little while.</tw-passagedata><tw-passagedata pid="29" name="Rats 05" tags="Sleep-Rats-Found" position="1700,2500" size="100,100">You push yourself to your feet and crawl into bed. The mattress creaks softly beneath your weight, and you wrap yourself in your blankets. You turn off you bedside lamp, blinking in the sudden darkness.
+Maybe you can [[let your guard down-&gt;Rats 05]]. Just for a little while.</tw-passagedata><tw-passagedata pid="29" name="Rats 05" tags="Sleep-Rats-Found" position="1700,2500" size="100,100">{(set: $lights to false)}
+You push yourself to your feet and crawl into bed. The mattress creaks softly beneath your weight, and you wrap yourself in your blankets. You turn off you bedside lamp, blinking in the sudden darkness.
 
 The room feels so much bigger now. The hole in the wall now completely out of sight. You lift your head to get a better look at it, and keep your eyes fixed on it for a while, almost expecting to see movement—something creeping out of the dark, some shadow shifting in the corner.
 
 But nothing moves. Nothing breathes except for you and the rats.
 
 You close your eyes, letting the tension drain away. It’s over now. The rats are safe, and whatever that awful, pressing feeling is, you can deal with it later. You’re too tired to care right now. [[Exhaustion pulls at you-&gt;Rats 06]], tugging you deeper into the warmth of your blankets.
-</tw-passagedata><tw-passagedata pid="30" name="Rats 06" tags="Sleep-Rats-Found Darkness" position="1900,2500" size="100,100">(set: $seenRats06 to true)As your breathing slows, [[the heaviness in the room seems to thicken.-&gt;Big Bad - Echoes in the Dark]] It presses down, wrapping around your chest, weighing you down. You shiver, tugging the covers closer, but force yourself to let it go.
+</tw-passagedata><tw-passagedata pid="30" name="Rats 06" tags="Sleep-Rats-Found Big-Bad" position="1900,2500" size="100,100">(set: $seenRats06 to true)As your breathing slows, [[the heaviness in the room seems to thicken.-&gt;Big Bad - Echoes in the Dark]] It presses down, wrapping around your chest, weighing you down. You shiver, tugging the covers closer, but force yourself to let it go.
 
 It’s nothing.
 
@@ -316,7 +500,12 @@ And as you drift off, the last thing you hear is a faint, barely audible noise�
 
 But you’re too tired to care.
 
-[[Sleep takes you before the darkness can.-&gt;Sleeping End Rats 01]]</tw-passagedata><tw-passagedata pid="31" name="Sleeping End Rats 01" tags="Sleep-Rats-Found" position="1900,2700" size="100,100">You wake slowly, blinking against the sunlight streaming through your curtains. 
+[[Sleep takes you before the darkness can.-&gt;Sleeping End Rats 01]]</tw-passagedata><tw-passagedata pid="31" name="Sleeping End Rats 01" tags="Sleep-Rats-Found" position="1900,2700" size="100,100">{(set: $lights to true)
+
+(if: $lights is true)[
+  $lightOn
+]}
+You wake slowly, blinking against the sunlight streaming through your curtains. 
 
 For a second, you just lie there, enjoying the warmth and quiet.
 
@@ -328,7 +517,10 @@ Turning, you check the container next to you nightstand. The rats are there, cur
 
 Stroking their backs gently, they nuzzle into your hand, and you feel some of the tension melt away.
 
-They made it through the night—and [[so did you.-&gt;Sleeping End Rats 02]]</tw-passagedata><tw-passagedata pid="32" name="Sleeping End Rats 02" tags="Sleep-Rats-Found" position="1900,2900" size="100,100">“I’m up, I’m up!” you call out, standing to grab your clothes. 
+They made it through the night—and [[so did you.-&gt;Sleeping End Rats 02]]</tw-passagedata><tw-passagedata pid="32" name="Sleeping End Rats 02" tags="Sleep-Rats-Found" position="1900,2900" size="100,100">{(if: $lights is true)[
+  $lightOn
+]}
+“I’m up, I’m up!” you call out, standing to grab your clothes. 
 
 As you get dressed, you can’t help but steal glances at the rats, Reggie and Blink if you remembered correctly.
 
@@ -336,42 +528,50 @@ You pull on your hoodie, noticing the hole in the wall. That’ll need fixing, b
 
 Smiling, you turn and head downstairs, the smell of pancakes drawing you in. It’s a new day, and you’ve got rats to feed.
 
-Everything feels normal again.
-//Almost.//</tw-passagedata><tw-passagedata pid="33" name="Big Bad Encounter - Stand Your Ground" tags="Darkness" position="1100,1800" size="100,100">(set: $hole to false)You force yourself to straighten up. “What do you want?” you say, louder this time. 
+Everything feels normal again.(click: &quot;Everything feels normal again.&quot;)[
+
+&#39;&#39;Good End: Rat Rescue&#39;&#39;
+
+You rescued the trapped rats and faced your fears.
+
+//Most of them.//
+
+(button:&quot;=X=&quot;)[[Start Over-&gt;A Night at Home - Start]]]</tw-passagedata><tw-passagedata pid="33" name="Big Bad Encounter - Stand Your Ground" tags="Big-Bad" position="1200,1700" size="100,100">You force yourself to straighten up. “What do you want?” you say, louder this time. 
 
 The thing doesn’t move closer, but you can feel it pressing in, like a fog filling every crevice of the room.
 
-“To exist,” it murmurs. The shape shifts, eyes blinking out of existence as more appear elsewhere. “I am scattered. Shattered. I need to become… whole.”
+&lt;div class=&quot;glitch&quot;&gt;“To exist,”&lt;/div&gt; it murmurs. The shape shifts, eyes blinking out of existence as more appear elsewhere. “I am scattered. Shattered. I need to become… whole.”
 
 The words scrape against your mind. There’s a hunger in them, a need so deep it feels like it could pull you apart.
 
-“And you… You give me shape. Give me form.” It leans closer, and your breath catches as it washes over you like a tide of cold, dark water.
+&lt;div class=&quot;glitch&quot;&gt;“And you… You give me shape. Give me form.”&lt;/div&gt; It leans closer, and your breath catches as it washes over you like a tide of cold, dark water.
 
-It feeds off attention— (transition-delay:2s)[your fear.]
+It feeds off attention—your fear.
 
 “No. I won’t let you.” Your voice is shaking, but you stand firm.
 
-“You looked for me.&quot;
+&lt;div class=&quot;glitch&quot;&gt;“You looked for me.&quot;
 
-(if: $hole)[&quot;Tore open what should have stayed closed.&quot;]The thing’s eyes narrow. “You cannot refuse me. I am what you see. I am your fear, your fascination—your need to know. And you are what makes me whole”
+(if: $hole is true )[&quot;Tore open what should have stayed closed.&quot;]&lt;/div&gt;The thing’s eyes narrow. “You cannot refuse me. I am what you see. I am your fear, your fascination—your need to know. And you are what makes me whole”
 
 [[Try to resist its influence-&gt;Big Bad Encounter - Mental Battle]]
-[[Confront it-&gt;Big Bad Encounter - A Bold Gamble]]</tw-passagedata><tw-passagedata pid="34" name="Big Bad Encounter - Run" tags="Darkness" position="500,1800" size="100,100">The pressure in the room intesifies, an almost palpable force presses against your skin, making every nerve scream at you to move. Without a second thought, you turn and bolt, heart hammering as you flee across the room.
+[[Confront it-&gt;Big Bad Encounter - A Bold Gamble]]</tw-passagedata><tw-passagedata pid="34" name="Big Bad Encounter - Run" tags="Big-Bad" position="1000,1700" size="100,100">You turn and bolt to the opposite side of your room, every nerve in your body screaming at you to move.
 
-The shadows seem to stretch, distorting in the corner of your vision as if the entity was chasing after you, spreading itself thin like a dark fog. A voice—cold and mocking—echoes in your head:
+The shadows seem to stretch, as if entity was chasing after you, spreading itself thin like a dark fog. A voice—cold and mocking—echoes in your head:
 
-“Run, run, but you can’t hide from me.”
+(live:1s)[&lt;div class=&quot;glitch&quot;&gt;“Run.”&lt;/div&gt;] 
 
-You stumble, a chill washing over you. Your limbs feel heavy, each step harder than the last. The thing is close—too close. You can feel it just behind you, brushing against your back.
+(live:2s)[&lt;div class=&quot;glitch&quot; style=&quot;text-indent: 2em&quot;&gt;“Run.”&lt;/div&gt;]
 
-And then, suddenly—it’s gone.
+(live:3s)[&lt;div class=&quot;glitch&quot; style=&quot;text-indent: 3em&quot;&gt;“But you can’t hide from me.”&lt;/div&gt;]
 
-You spin around, breathless, back pressed against the wall. The creature is there, just out of reach, its many eyes locked on yours. It doesn’t move; it just… watches.
+You stumble, a chill washing over you. Your limbs feel heavy, each step harder than the last. You can feel it just behind you, brushing against your back.
 
-There’s no point in running. Not now. But what can you do?-&gt;Big Bad Encounter - Fractured Core]]
-</tw-passagedata><tw-passagedata pid="35" name="Big Bad Encounter - Mental Battle" tags="Darkness" position="900,2000" size="100,100">But it’s everywhere. The whispers grow louder, tugging at your thoughts. Images flash in your mind—shattered pieces of something vast, something dark, spreading across the cosmos. A creature that shouldn’t exist. Eyes flicker behind your eyelids, &#39;&#39;multiplying&#39;&#39;.
+And then, suddenly—[[it’s gone.-&gt;Big Bad Encounter - Cornered]]</tw-passagedata><tw-passagedata pid="35" name="Big Bad Encounter - Mental Battle" tags="Big-Bad" position="1000,1900" size="100,100">But it’s everywhere. The whispers grow louder, tugging at your thoughts. Images flash in your mind—shattered pieces of something vast, something dark, spreading across the cosmos. A creature that shouldn’t exist. Eyes flicker behind your eyelids, &#39;&#39;multiplying&#39;&#39;.
 
-“Don’t look away,” it hisses, writhing in front of you, losing shape and reforming in a heartbeat. “I will break you.”
+&lt;div class=&quot;glitch&quot;&gt;“Don’t look away,” &lt;/div&gt; it hisses, writhing in front of you, losing shape and reforming in a heartbeat. 
+
+(live:2s)[&lt;div class=&quot;glitch&quot; style=&quot;text-indent:2em&quot;&gt;“I will break you.”&lt;/div&gt;]
 
 Your body trembles as you fight to shove it out of your head, but it’s pushing back, prying open your thoughts, slipping into your memories.
 
@@ -383,13 +583,13 @@ But you hold on. You push back.
 
 [[“No. I won’t let you in.”-&gt;Big Bad Encounter - Strike]]
 
-The thing shrieks, recoiling.</tw-passagedata><tw-passagedata pid="36" name="Big Bad Encounter - A Bold Gamble" tags="Darkness" position="1100,2000" size="100,100">You swallow your fear, glaring at the entity. “I’m not afraid of you,” you say, the quiver in your voice betrays you. But you don’t look away.
+The thing shrieks, recoiling.</tw-passagedata><tw-passagedata pid="36" name="Big Bad Encounter - A Bold Gamble" tags="Big-Bad" position="1200,1900" size="100,100">You swallow your fear, glaring at the entity. “I’m not afraid of you,” you say, the quiver in your voice betrays you. But you don’t look away.
 
 It falters, the edges of its form flickering, blurring. Its eyes countless, shifting eyes focus on you, wide and searching.
 
-(t8n:&quot;pulse&quot;)[&#39;&#39;“Liar.”&#39;&#39;]
+&lt;div class=&quot;glitch&quot;&gt;&#39;&#39;“Liar.”&#39;&#39;&lt;/div&gt;
 
-You force yourself to take a step closer. “You can’t break me,” you say. “You’re nothing. Just a fragment of something that’s already gone.”
+You force yourself to take a step closer. &#39;&#39;“You can’t break me,”&#39;&#39; you say. &#39;&#39;“You’re nothing. Just a fragment of something that’s already gone.”&#39;&#39;
 
 The words cut through the air like a knife. The entity recoils, the swirling darkness tightening around itself.
 
@@ -397,12 +597,13 @@ For a moment, you think it’s going to lash out.
 
 But instead, [[//it shrinks.//-&gt;Big Bad Encounter - Banishing Act]]
 
-[[You move forward, standing up straighter-&gt;Big Bad Encounter - Strike]]</tw-passagedata><tw-passagedata pid="37" name="Big Bad Encounter - Strike" tags="Darkness" position="975,2200" size="100,100">You’ve weakened it. Whatever it is, it’s unstable, barely holding itself together. If you can break its hold completely… maybe you can stop it from reforming.
+[[You move forward, standing up straighter-&gt;Big Bad Encounter - Strike]]</tw-passagedata><tw-passagedata pid="37" name="Big Bad Encounter - Strike" tags="Big-Bad" position="1075,2100" size="100,100">You’ve weakened it. Whatever it is, it’s unstable, barely holding itself together. If you can break its hold completely… maybe you can stop it from reforming.
 
 Gathering your strength, you reach out—not with your hands, but with your mind. You imagine its form shattering, breaking into pieces and scattering into nothingness.
 
 The entity howls. The room spins as its form flickers, eyes blinking out of existence. 
-&#39;&#39;“Stop!”&#39;&#39; it screeches, its voice echoing like shards of glass scraping together. &#39;&#39;“I will not—”&#39;&#39;
+
+&lt;div class=&quot;glitch&quot;&gt;“Stop!”&lt;/div&gt; it screeches, its voice echoing like shards of glass scraping together. &lt;div class=&quot;glitch&quot;&gt;(text-style:&quot;fade-in-out&quot;)[ “I will not—”]&lt;/div&gt;
 
 But you push.
 
@@ -414,17 +615,15 @@ The mist scatters, vanishing into the shadows.
 
 You sink to your knees, vision blurring. Exhaustion washes over you, your body collapsing under the strain. As the darkness sweeps in, your last thought is that it’s over.
 
-[[Sleep drags you under before you can question it.-&gt;Big Bad Encounter - Wake Up]]
+(t8n-depart:&quot;blur&quot;)+(t8n-arrive:&quot;flicker&quot;)[[Sleep drags you under before you can question it.-&gt;Big Bad Encounter - Good End]]</tw-passagedata><tw-passagedata pid="38" name="Big Bad Encounter - Banishing Act" tags="Big-Bad" position="1200,2100" size="100,100">The entity weakened, its form flickering like a dying flame. You feel the weight of its presence lifting—just a little. If you can sever its hold on you completely, maybe you can banish it back to wherever it came from.
 
-</tw-passagedata><tw-passagedata pid="38" name="Big Bad Encounter - Banishing Act" tags="Darkness" position="1100,2200" size="100,100">It’s weakened, its form flickering like a dying flame. You feel the weight of its presence lifting—just a little. If you can sever its hold on you completely, maybe you can banish it back to wherever it came from.
-
-You clench your fists, focusing on the swirling darkness. “Get. Out,” you whisper.
+You clench your fists, focusing on the swirling darkness. &#39;&#39;“Get. Out,”&#39;&#39; you whisper.
 
 The entity recoils, a sound like shattering glass filling the air. Its eyes—dozens of them—widen in horror.
 
-&#39;&#39;“No!”&#39;&#39;
+&lt;div class=&quot;glitch&quot;&gt;(text-style:&quot;fade-in-out&quot;)[“No!”]&lt;/div&gt;
 
-You take a step forward. (t8n:&quot;pulse&quot;)[&#39;&#39;“I said, get out!”&#39;&#39;]
+You take a step forward. “I said, get out!&quot;
 
 With a final, desperate shriek, the entity’s form shatters. The pieces scatter, dissolving into thin air. The heaviness in the room vanishes, and the darkness peels away like mist under the sun.
 
@@ -434,48 +633,40 @@ It’s gone.
 
 You sink to your knees, vision blurring. Exhaustion washes over you, your body collapsing under the strain. As the darkness sweeps in, your last thought is that it’s over.
 
-[[Sleep drags you under before you can question it.-&gt;Big Bad Encounter - Wake Up]]</tw-passagedata><tw-passagedata pid="39" name="Big Bad Encounter - Aftermath" tags="Darkness" position="425,1850" size="100,100">The entity shudders, its form warping as it struggles to hold itself together. Black tendrils lash out, fading in and out of view, blurring like smoke in the wind. The cracks you made in its core deepen, glowing faintly as a strange, unearthly light spills through, the creature’s edges unraveling.
+[[Sleep drags you under before you can question it.-&gt;Big Bad Encounter - Good End]]</tw-passagedata><tw-passagedata pid="39" name="Big Bad Encounter - Good End" tags="Big-Bad" position="1200,2300" size="100,100">{(set: $lights to true)
 
-And then, slowly, it begins to break apart.
-
-You watch, frozen, as pieces of it flake away—small fragments of darkness dissolving into nothing. Its hollow eyes narrow, still fixed on you, the voice reverberating through your thoughts one last time:
-
-“This isn’t over. You know that.”
-
-The pressure in the air lifts, the heaviness receding. The creature’s form disintegrates, scattered into a thin mist that evaporates in the blink of an eye. It’s gone—banished, defeated… for now.
-
-But the space where it stood still feels tainted. The air is sharp, electric, tinged with something that shouldn’t be there. You shiver, the feeling of its gaze lingering long after the thing has vanished.
-
-You won—but at what cost?
-</tw-passagedata><tw-passagedata pid="40" name="Big Bad Encounter - Wake Up" tags="Darkness" position="1100,2400" size="100,100">(set: $seenRats04 to false)(set: $seenRats06 to false)Your eyes snap open. Daylight filters through your curtains, casting soft shadows across your bed. You blink, disoriented, a dull ache throbbing in your head.
+(if: $lights is true)[
+  $lightOn
+]}
+Your eyes snap open. Daylight filters through your curtains, casting soft shadows across your bed. You blink, disoriented, a dull ache throbbing in your head.
 
 You’re in your room. The same room. But the air feels lighter—no oppressive weight, no sinister whispers.
 
 Just… peace.
 
-(if: $seenRats04 or $seenRats06)[The rats are still nestled in their crate, sleeping soundly.] You sit up slowly, rubbing at your eyes. Was it a dream? It felt like a dream. But deep down, you know it wasn’t.
+(if: $seenRats04 is true or $seenRats06 is true)[The rats are still nestled in their crate, sleeping soundly.] You sit up slowly, rubbing at your eyes. Was it a dream? It felt like a dream. But deep down, you know it wasn’t.
 
 You fought something last night. Something terrible.
 
-And you won.</tw-passagedata><tw-passagedata pid="41" name="Big Bad Encounter - Fractured Core" tags="Darkness" position="475,1925" size="100,100">The entity shudders violently as you lash out, striking at the unstable mass of shadow and light at its center. The cracks you inflicted earlier have deepened, glowing faintly—brighter with every hit. Each blow sends a tremor through its form, splintering the darkness.
+And you won.(click: &quot;And you won.&quot;)[
 
-It recoils, inky tendrils writhing in pain, and you press the advantage. With every swing, the thing’s shape warps and distorts, struggling to hold itself together. For the first time, it feels less like a nightmare and more like something desperate—fractured and incomplete.
+&#39;&#39;Good End: Live to See Another Day&#39;&#39;
 
-“Stop…” The voice in your mind wavers, a chaotic mess of rage and anguish. “You don’t understand—”
+You&#39;ve defeated the dark force and lived to see an another day.
 
-But you do. You know what it wants—to feed on your fear, to reshape itself with your mind as its anchor. And you’re done letting it use you. You raise the hammer again, aiming straight for the heart of the thing.
+(button:&quot;=X=&quot;)[[Start Over-&gt;A Night at Home - Start]]]</tw-passagedata><tw-passagedata pid="40" name="Big Bad Encounter - Fractured Core" tags="Big-Bad" position="825,1925" size="100,100">The entity shudders violently as you lash out, striking at the unstable mass of shadow and light at its center. 
 
-It howls—an unearthly, broken sound—echoing inside your skull as you bring the hammer down one last time. The fractured core splinters, a jagged burst of light erupting from the wound. The entity’s form collapses around it, tendrils snapping, shadows unraveling.
+You swing at it again and again
 
-“You… can’t…” The voice fades, stretched thin and brittle, breaking apart with the rest of it.
+The cracks you inflict deepen, glowing brighter with every hit. Each blow sends a tremor through its form, splintering the darkness.
 
-And then, all at once, it crumbles. The shattered pieces dissolve into the air, swirling into a black mist that disintegrates as you watch.
+It recoils, writhing in pain, and you press the advantage. With every swing, the thing’s shape warps and distorts, struggling to hold itself together. For the first time, it feels less like a nightmare and more like something desperate—fractured and incomplete.
 
-Silence falls, the weight of the air lifting. The room is still, the darkness retreating back into the corners, leaving nothing behind but a faint, lingering chill.
+&lt;div class=&quot;glitch&quot;&gt;“Stop…” &lt;/div&gt;  
 
-You sink to your knees, vision blurring. Exhaustion washes over you, your body collapsing under the strain. As the darkness sweeps in, your last thought is that it’s over.
+The voice in your mind wavers, a chaotic mess of rage and anguish. &lt;div class=&quot;glitch&quot;&gt;(text-style:&quot;fade-in-out&quot;)[“You don’t understand—”]&lt;/div&gt;
 
-Sleep drags you under before you can question it.-&gt;-&gt;Big Bad Encounter - Wake Up]]</tw-passagedata><tw-passagedata pid="42" name="Check the Lock - Through the Glass" tags="Window" position="1100,900" size="100,100">(set: $checkWindow to true)You hesitate, as you reach for the curtain. The room feels too still, every creak of the floorboards is too loud.
+[[But you do.-&gt;Big Bad Encounter - Fractured Core Success]] </tw-passagedata><tw-passagedata pid="41" name="Check the Lock - Through the Glass" tags="Window" position="1100,900" size="100,100">(set: $checkWindow to true)You hesitate, as you reach for the curtain. The room feels too still, every creak of the floorboards is too loud.
 
 Slowly, you pull the fabric aside.
 
@@ -489,13 +680,13 @@ Maybe it really is just nerves.
 
 But then, just as you’re about to step back, something catches your eye—right at the edge of the yard. A dark shape, too far away to make out clearly, but it’s gone before you can blink.
 
-The weight in your chest secomes a sharp pang, and you clutch your chest.
+The weight in your chest becomes a sharp pang, and you clutch your chest.
 Did you really see that? Or is your mind just playing tricks?
 
-You close the curtain, and back away, before turning around and [[running upstairs.-&gt;Check It Out 3 - False Sense of Safety]]
+You close the curtain, and back away, before turning around and [[running upstairs.-&gt;Run Upstairs 01]]
 
-But [[the feeling doesn’t go away.-&gt;Check It Out 4 - Compulsive Reassurance]]**
-&lt;!--Comment Text--&gt;</tw-passagedata><tw-passagedata pid="43" name="Check It Out 3 - False Sense of Safety" tags="Window" position="1300,1200" size="100,100">(set: $checkLock to false)(set: $checkWindow to false)You force yourself to turn away, stepping back into the hallway. There&#39;s an urge to look again, to make sure there’s nothing out there.
+But [[the feeling doesn’t go away.-&gt;Look Out the Window 2]]**
+&lt;!--Comment Text--&gt;</tw-passagedata><tw-passagedata pid="42" name="Check It Out 3 - False Sense of Safety" tags="Window" position="1350,1200" size="100,100">(set: $checkLock to false)(set: $checkWindow to false)You force yourself to turn away, stepping back into the hallway. There&#39;s an urge to look again, to make sure there’s nothing out there.
 
 But you ignore it.
 
@@ -511,26 +702,127 @@ Nothing weird, nothing dangerous.
 Just...you and an empty house.
 
 [[You start getting into bed-&gt;Ignore it 02]]
-&lt;!--
-[[Double check the locks one more time—just in case-&gt;Check It Out 4 - Compulsive Reassurance]]--&gt;</tw-passagedata><tw-passagedata pid="44" name="Check It Out 4 - Compulsive Reassurance" tags="Window" position="1100,1200" size="100,100">Before you know it, you’re heading back downstairs. The locks on the back door, the kitchen window, the front door— //all// secure. But the pressure on your chest continues to grow.
 
-You glance around, feeling your pulse race. What is it? Where is it?
+&lt;!--
+Double check the locks one more time—just in case-&gt;Check It Out 4 - Compulsive Reassurance--&gt;</tw-passagedata><tw-passagedata pid="43" name="Look Out the Window 2" tags="Window" position="1100,1200" size="100,100">Before you know it, you’re heading back downstairs. The locks on the back door, the kitchen window, the front door— //all// secure. But the pressure on your chest continues to grow.
+
+You glance around, feeling your pulse race. //What// is it? //Where// is it?
 
 The empty rooms around you seem darker now, the silence almost oppressive. Every shadow looks deeper, every corner sharper, and for a split second, you think you see something moving at the edge of your vision.
 
 You whirl around, heart pounding. There’s nothing there. //There’s nothing there.//
 The feeling won’t let you go, but [[you can&#39;t stay here all night.-&gt;Check It Out 3 - False Sense of Safety]]
-</tw-passagedata><tw-passagedata pid="45" name="Call Out 01" tags="" position="1900,1375" size="100,100">You take a deep breath, and force yourself to speak. “Hello?” The word comes, barely above a whisper. You clear your throat and try again, louder this time: “Who’s there?”
+</tw-passagedata><tw-passagedata pid="44" name="Call Out 01" tags="" position="1900,1400" size="100,100">(set: $scratch to (t8n:&quot;flicker&quot;)+ (transition-time: 2s) )You take a deep breath, and force yourself to speak. “Hello?” The word comes, barely above a whisper. You clear your throat and try again, louder this time: “Who’s there?”
 
 The sound of your own voice echoes back at you. For a moment, there’s nothing—no response, no movement, just the lingering quiet.
 
-And then—scratch, scratch, scratch. It’s the same soft noise as before, but now it sounds closer. You tense, the hairs on the back of your neck stand on end. 
+And then—$scratch[scratch,] $scratch+(t8n-delay: 1s)[scratch,] $scratch+(t8n-delay: 2s)[scratch.] It’s the same soft noise as before, but now it sounds closer. You tense, the hairs on the back of your neck stand on end. 
 
 It’s ridiculous, but you can’t shake the feeling that something has shifted. Like the room itself is holding its breath, waiting.
 
 The [[air feels heavy, thickening-&gt;Big Bad - Echoes in the Dark]] until it’s hard to breathe.
 
-[[You shiver, rubbing your arms. -&gt;Call Out 02]]</tw-passagedata></tw-storydata>
+[[You shiver, rubbing your arms. -&gt;Call Out 02]]</tw-passagedata><tw-passagedata pid="45" name="Big Bad Encounter - Fractured Core Success" tags="Big-Bad" position="800,2100" size="100,100">You know what it wants—//to feed on your fear,// to reshape itself with your mind as its anchor. And you’re done letting it use you. You raise the hammer again, aiming straight for its core.
+
+It howls—an unearthly, broken sound—echoing inside your skull as you bring the hammer down one last time. The fractured core shatters, a burst of light erupting from the whole in its chest. The entity’s form collapses around it, shadows unraveling.
+
+&lt;div class=&quot;glitch&quot;&gt;(text-style:&quot;fade-in-out&quot;)[“You… can’t…”]&lt;/div&gt;
+
+The voice fades, stretched thin and brittle, breaking apart with the rest of it.
+
+And then, it crumbles. The shattered pieces dissolve into the air, swirling into a black mist that disintegrates as you watch.
+
+Silence falls, the weight of the air lifting. The room is still, the darkness retreating back into the corners, leaving nothing behind but a faint, lingering chill.
+
+You sink to your knees, vision blurring. Exhaustion washes over you, your body collapsing under the strain. As the darkness sweeps in, your last thought is that it’s over.
+
+[[Sleep drags you under before you can question it.-&gt;Big Bad Encounter - Good End]]
+</tw-passagedata><tw-passagedata pid="46" name="pretty" tags="header" position="1700,100" size="100,100">(enchant:?link,
+     (color: #bf360c ) +
+     (hover-style: (color:#8e24aa))
+ )
+ 
+ 
+(enchant:?page,
+	(font:&quot;sans-serif&quot;)
+    )
+</tw-passagedata><tw-passagedata pid="47" name="Big Bad Encounter - Cornered" tags="Big-Bad" position="800,1700" size="100,100">You spin around, breathless, back pressed against the wall. The creature is there, just out of reach, its many eyes locked on yours. It doesn’t move; it just… //watches.//
+
+The entity&#39;s voice echoes in your mind, scraping against your thoughts...
+
+&lt;div class=&quot;glitch&quot;&gt;&quot;Why run?&quot;&lt;/div&gt;
+
+The words slither through you, curling around you, feeding off your fear. You try to push them out, to drown them in the pounding of your heart, but they come again, louder, more insistent.
+
+&lt;div class=&quot;glitch&quot;&gt;&quot;You know you can&#39;t escape me. You feel it, don’t you? The fear... the desperation.&quot;&lt;/div&gt;
+
+Your knees buckle. A crushing weight presses on your chest, making it hard to breathe. The floor beneath you feels unsteady, and the shadows stretch and shift, their shapes twisting into grotesque figures.
+
+(text-size: .8)+(text-color:grey)+(font:&quot;serif&quot;)[//&quot;You can&#39;t resist forever,&quot;//] the entity purrs.
+
+&lt;div class=&quot;glitch&quot; &gt;&quot;Let me in.&quot;&lt;/div&gt;
+
+Your heart hammers in your ears, and you feel the pull—the seductive offer of relief from this terror. If you just let go… if you just stop fighting… the fear would be gone.
+
+[[You wouldn&#39;t have to be scared anymore.-&gt;Big Bad Encounter - Entice]]</tw-passagedata><tw-passagedata pid="48" name="Big Bad Encounter - Entice" tags="Big-Bad" position="500,1800" size="100,100">The walls feel like they’re pressing in. The air is thick, suffocating. Your vision wavers, and your eyes water. You can feel the entity inching closer, close enough to touch, close enough to—
+
+You squeeze your eyes shut, trying to focus, to will yourself into action. But the harder you try to push the fear away, the more it clings to you—sinking deeper into your mind, worming its way into every thought.
+
+//(text-size: .8)+(text-color:grey)+(font:&quot;serif&quot;)[&quot;Why struggle?&quot;]//
+
+The voice whispers again, closer this time, laced with desperation.(text-size:.7)+(text-color:grey)[// &quot;I will consume you, piece by piece... and you’ll feel nothing but peace when you give in.&quot;//]
+
+[[&quot;Peace...?&quot;-&gt;Big Bad Encounter - Relief?]] You turn the word around in your mind.
+&lt;!--  style=&quot;text-indent: 2em&quot;--&gt;</tw-passagedata><tw-passagedata pid="49" name="Big Bad Encounter - Relief?" tags="Big-Bad" position="500,2000" size="100,100">Your body trembles, and you feel the creeping sensation of something crawling beneath your skin. You can’t see it, but it’s there, moving slowly, inching its way closer to your core. You can almost feel its cold breath on the back of your neck.
+
+Your mind reels. A part of you screams to fight, to run, to do anything but give in. But another part—a part that’s growing louder by the minute—begs for an end to this terror. For the weight to lift. For the fear to stop.
+
+You open your eyes, just a bit, and the world around you seems warped. Shadows twist into things they shouldn’t be. You see faces that leer at you, and mouths that stretch far too wide, waiting, watching.
+
+//(text-size: .8)+(text-color:grey)+(font:&quot;serif&quot;)[&quot;You’re tired, aren’t you?&quot;]// the entity whispers, its voice no longer just in your head, but in the air around you. //(text-size: .8)+(text-color:grey)+(font:&quot;serif&quot;)[&quot;I can feel it. I can make it stop. Just let me in... and I’ll take it all away.&quot;]//
+
+Your breath catches in your throat. Could it really be that easy? A single a moment of surrender, and you would be free.  The fear, and the darkness—it would all be over. Temptation wraps itself around you, and for the briefest moment, [[you consider it.-&gt;Big Bad Encounter - Overwhelming Fear]]
+
+There’s no where to run, not anymore. [[But what can you do?-&gt;Big Bad Encounter - Fractured Core]] </tw-passagedata><tw-passagedata pid="50" name="Big Bad Encounter - Overwhelming Fear" tags="Big-Bad" position="500,2200" size="100,100">You stand frozen, your heart hammering against your ribs. Its form warps and twists, limbs bending at unnatural angles, eyes multiplying until they cover its figure completely. 
+
+A wave of dread crashes over you as it becomes something  //&#39;&#39;*worse*&#39;&#39;//—something that defies human understanding. It’s no longer just a shattered cosmic being; it’s an abyss given form.
+
+Its new form trembles with insatiable hunger. The air around you thickens, and you can feel it pressing in on you. Your chest tightens, and your limbs feel heavy, like you&#39;re sinking into the floor. 
+
+(live:2s)[&lt;span class=&quot;glitch&quot;&gt;“You can’t run…”&lt;/span&gt;]
+
+(live:3s)[&lt;span class=&quot;glitch&quot; style=&quot;text-indent: 2em&quot;&gt;&quot;you can’t hide…”&lt;/span&gt;]
+
+The voice echoes in your skull, louder, sharper than before. You try to scream, but no sound comes out.
+
+Its eyes focus on you, and in one fluid, grotesque motion, the entity rushes forward. You freeze, fear crashes through your mind. Too vast to contain, it overwhelms every rational thought.
+
+It presses against your skin, shape shifting once again. Dark tendrils force their way into your mouth. You choke, your body shaking violently as the entity slides down your throat, smothering your screams.
+
+Panic sets in, //but it’s useless//—your body is no longer yours. You can feel it—cold, wet, (t8n:&quot;pulse&quot;)[&#39;&#39;//alive//&#39;&#39;]—spreading through your veins, seeping deep into your flesh. 
+
+Your mind screaming in terror as the [[it tries to smother your consciousness with its own.-&gt;Big Bad Encounter - Suppressed]]</tw-passagedata><tw-passagedata pid="51" name="Big Bad Encounter - Suppressed" tags="Big-Bad" position="500,2400" size="100,100">Your body moves against your will. Every muscle twitches under its control. You’re trapped, a passenger in your own body, your thoughts muffled beneath the entity’s &lt;!--insidious--&gt; presence. 
+
+It forces you to look in the mirror at your dresser. You don’t recognize yourself anymore—your eyes, your face, everything feels foreign. A faint reflection of the entity’s many //many// eyes flickers in the glass, a reminder of who is in control now.
+
+(t8n:&quot;rumble&quot;)[//No…  //](t8n-delay: 2s)+(t8n:&quot;rumble&quot;)[//No!//]
+
+You shout into the void of your own mind, but your voice goes unheard. You’re still *there*, somewhere deep inside, but [[powerless to stop it.-&gt;Big Bad Encounter - Prey]] The entity turns your body, flexing your fingers like it’s testing out a new tool.
+</tw-passagedata><tw-passagedata pid="52" name="Big Bad Encounter - Prey" tags="Big-Bad" position="500,2600" size="100,100">The entity leaves the room in your body, stepping into the hallway as you scream internally, fighting to regain control. But you’re helpless.
+
+It moves toward the front door, footsteps steady, //predatory//. You feels your hunger—‘’//it’s//’’ hunger—intensify with every step. You know exactly what it wants. 
+
+Through your eyes, you see a figure outside—one of the neighbors. They’re walking up to their porch, oblivious to the danger that approaches.
+
+The entity smiles, and your mouth stretches into a grin that you know is not your own. You realize with horror what comes next. 
+
+You aren’t yourself anymore. You’re a vessel for something ancient, something hungry—and you are powerless to stop it. (click: &quot;you are powerless to stop it.&quot;)[
+
+&#39;&#39;Bad End: Devoured by Fear&#39;&#39;
+
+Your mind is shattered, your will broken. The entity has claimed you, and through you, it will claim many more.
+
+(button:&quot;=X=&quot;)[[Start Over-&gt;A Night at Home - Start]]]</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
